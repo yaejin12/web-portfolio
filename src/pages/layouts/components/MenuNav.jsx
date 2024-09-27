@@ -22,13 +22,13 @@ function MenuNav({ styles }) {
     <nav className={styles.menu}>
       <div className={styles.inner}>
         <ul className={`${styles.gnb} ${ClassFn()}`}>
-          <li className={styles.backImgWrapper}>
+          {/* <li className={styles.backImgWrapper}>
             {isIntroduce && (
               <NavLink to="/">
                 <img src={backImg}></img>
               </NavLink>
             )}
-          </li>
+          </li> */}
           <li className={styles.nav}>
             <NavLink to="/introduce">
               <div className={styles.intro}>INTRODUCE</div>

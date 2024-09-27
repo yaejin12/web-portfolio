@@ -24,14 +24,15 @@ header {
   .gnb {
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
-    .backImgWrapper {
-      width: 50px;
-      img {
-        animation: back 1.5s ease-in-out infinite alternate;
-      }
-    }
+
+    // .backImgWrapper {
+    //   width: 50px;
+    //   img {
+    //     animation: back 1.5s ease-in-out infinite alternate;
+    //   }
+    // }
 
     .nav {
       display: flex;
@@ -60,18 +61,9 @@ header {
     // Project일때
     &.isProject {
       .nav {
-        .intro {
-          color: #fff;
-
-          &:hover {
-            background-color: #fff;
-            color: var(--color-bk);
-          }
-        }
-
         .project {
-          background-color: #fff;
-          color: var(--color-bk);
+          background-color: var(--color-bk);
+          color: #fff;
           transition: none;
         }
       }
@@ -120,6 +112,9 @@ header {
       text-align: center;
       img {
         width: 50px;
+      }
+      .home {
+        width: 42px;
       }
     }
   }

@@ -9,7 +9,7 @@ function Introduce() {
   useEffect(() => {
     setTimeout(() => {
       setRendering(true);
-    }, 3000);
+    }, 1700);
   }, []);
 
   return (
