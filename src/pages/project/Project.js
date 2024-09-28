@@ -1,33 +1,38 @@
 import React from "react";
 import styles from "./Project.module.scss";
 import ProjectList from "./components/ProjectList";
-import meeting from "../../assets/images/img/meeting.png";
-import fivejo from "../../assets/images/img/5jo.png";
+
 import GradationBg from "../../components/common/gradationBg/GradationBg";
+import { Outlet, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Project() {
-  return (
-    <GradationBg>
-      <div className={styles.projectWrapper}>
-        <div className={styles.inner}>
-          <ProjectList
-            styles={styles}
-            title={"과감하게 팅기지 말고 과팅"}
-            date={"2024. 7. 17 - 2024. 8. 29"}
-            team={"3on3 조"}
-            img={meeting}
-          />
+  const location = useLocation();
 
-          <ProjectList
-            styles={styles}
-            title={"나의 애착 페이지"}
-            date={"2024. 6. 21 - 2024. 7. 9"}
-            team={"편히 쉬 조"}
-            img={fivejo}
-          />
-        </div>
-      </div>
-    </GradationBg>
+  const isRootPath = location.pathname === "/project";
+  const projectDummy = useSelector((state) => state.project.dummy);
+
+  return (
+    <>
+      {isRootPath && (
+        <GradationBg>
+          <div className={styles.projectWrapper}>
+            <div className={styles.inner}>
+              {projectDummy.map((project) => {
+                return (
+                  <ProjectList
+                    key={project.id}
+                    project={project}
+                    styles={styles}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </GradationBg>
+      )}
+      <Outlet />
+    </>
   );
 }
 

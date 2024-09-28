@@ -16,8 +16,8 @@
 
   .projectList {
     .projectBox {
-      padding: 30px 10px;
-      border-bottom: 1px solid var(--color-bk);
+      padding: 50px 10px;
+      // border-bottom: 1px solid var(--color-bk);
       border-top: 1px solid var(--color-bk);
 
       display: flex;
@@ -27,37 +27,15 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+      }
 
-        .projectText {
-          font-size: 30px;
-          font-weight: 600;
+      // 버튼
+      .projectLink {
+        // width: 200px;
+        display: flex;
 
-          .infoDetail {
-            font-size: 19px;
-            font-weight: 500;
-            margin-top: 15px;
-            line-height: 180%;
-          }
-        }
-        // 버튼
-        .projectLink {
-          .detailBtn {
-            width: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 500;
-
-            font-size: 16px;
-            padding: 10px 15px;
-            border-radius: 40px;
-            color: #fff;
-            background-color: var(--color-bk);
-
-            img {
-              margin-left: 8px;
-            }
-          }
+        span {
+          margin-right: 7px;
         }
       }
 
@@ -68,6 +46,19 @@
         height: 410px;
       }
     }
+  }
+}
+
+.projectText {
+  font-size: 43px;
+  line-height: 140%;
+  font-weight: 600;
+
+  .infoDetail {
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 30px;
+    line-height: 170%;
   }
 }
 

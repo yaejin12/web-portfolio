@@ -1,29 +1,30 @@
 import React from "react";
-import detailIcon from "../../../assets/images/icons/detail_W.svg";
+import { NavLink } from "react-router-dom";
+import ProjectListHeader from "./ProjectListHeader";
+import ProjectListBtn from "./ProjectListBtn";
 
-function ProjectList({ styles, title, date, team, img }) {
+function ProjectList({ styles, project }) {
+  const { url } = project;
+
+  // 링크 정보와 이름을 매핑
+  const links = [
+    { name: "바로가기", link: url.portfolio },
+    { name: "사이트", link: url.site },
+    { name: "GitHub", link: url.github },
+  ];
+
+  console.log(links);
+
   return (
     <>
       <ul className={styles.projectList}>
         <li className={styles.projectBox}>
           <div className={styles.projectInfoWrapper}>
-            <div className={styles.projectText}>
-              <div>{title}</div>
-              <p className={styles.infoDetail}>
-                {date} <br />
-                {team}
-              </p>
-            </div>
-            <div className={styles.projectLink}>
-              <a>
-                <div className={styles.detailBtn}>
-                  상세 정보<img src={detailIcon}></img>
-                </div>
-              </a>
-            </div>
+            <ProjectListHeader project={project} />
+            <ProjectListBtn links={links} />
           </div>
           <div className={styles.projectImgWrapper}>
-            <img src={img}></img>
+            <img src={project.img}></img>
           </div>
         </li>
       </ul>
