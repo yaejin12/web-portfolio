@@ -97,36 +97,37 @@
 
 .infoWrapper {
   width: 100%;
-}
-// 스킬 소제목
-.skillInfo {
-  display: flex;
-  align-items: center;
-  font-size: 17px;
-  font-weight: 600;
-  // margin-bottom: 15px;
-  width: 100%;
-  border-bottom: 1px solid var(--color-bk);
-  padding: 15px 0;
 
-  &:nth-child(1) {
-    padding-top: 0;
-  }
-
-  &:nth-last-child(1) {
-    border-bottom: none;
-  }
-
-  .skillListName {
-    width: 100px;
-  }
-
-  p {
-    margin-left: 15px;
-  }
-
-  .infoDetailText {
+  // 스킬 소제목
+  .info {
     display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    // margin-bottom: 15px;
+    width: 100%;
+    border-bottom: 1px solid var(--color-bk);
+    padding: 15px 0;
+
+    &:nth-child(1) {
+      padding-top: 0;
+    }
+
+    &:nth-last-child(1) {
+      border-bottom: none;
+    }
+
+    .listName {
+      width: 100px;
+    }
+
+    p {
+      margin-left: 15px;
+    }
+
+    .infoDetailText {
+      display: flex;
+    }
   }
 }
 

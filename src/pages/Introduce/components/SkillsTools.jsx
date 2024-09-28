@@ -1,5 +1,5 @@
 import React from "react";
-import SkillBox from "../../../components/common/skiil/SkillBox";
+import SkillBox from "../../../components/common/skill/SkillBox";
 
 function SkillsTools({ styles, Rendering }) {
   const frontDummy = [
