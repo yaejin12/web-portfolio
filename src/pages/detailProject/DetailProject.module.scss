@@ -86,47 +86,69 @@
 // DetailSkills 파일(스킬)
 // ========================
 
-.titleWrapper {
-  width: 800px;
-}
-
-.title {
-  font-size: 25px;
+// 스킬 소제목
+.info {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
   font-weight: 600;
-}
-
-.infoWrapper {
+  // margin-bottom: 15px;
   width: 100%;
+  border-bottom: 1px solid var(--color-bk);
+  padding: 15px 0;
 
-  // 스킬 소제목
-  .info {
+  &:nth-child(1) {
+    padding-top: 0;
+  }
+
+  &:nth-last-child(1) {
+    border-bottom: none;
+  }
+
+  .listName {
+    width: 200px;
+  }
+
+  p {
+    margin-left: 15px;
+  }
+
+  .infoDetailText {
     display: flex;
-    align-items: center;
-    font-size: 17px;
-    font-weight: 600;
-    // margin-bottom: 15px;
-    width: 100%;
-    border-bottom: 1px solid var(--color-bk);
-    padding: 15px 0;
+  }
 
-    &:nth-child(1) {
-      padding-top: 0;
+  &.work {
+    line-height: 160%;
+    .DetailWorkSkill {
+      font-size: 13px;
+      font-weight: 400;
+      margin-top: 10px;
     }
-
-    &:nth-last-child(1) {
-      border-bottom: none;
+    &.info {
+      align-items: start;
+      padding: 50px 0;
     }
-
-    .listName {
-      width: 100px;
+    &.info:nth-child(1) {
+      padding: 15px 0 50px 0;
     }
-
-    p {
-      margin-left: 15px;
-    }
-
     .infoDetailText {
-      display: flex;
+      flex-direction: column;
+
+      width: 500px;
+      line-height: 160%;
+
+      .detailWork {
+        margin-bottom: 5px;
+        margin-top: 50px;
+
+        &:nth-child(1) {
+          margin-top: 0;
+        }
+      }
+      .detailWorkSubText {
+        font-weight: 400;
+        margin-top: 10px;
+      }
     }
   }
 }

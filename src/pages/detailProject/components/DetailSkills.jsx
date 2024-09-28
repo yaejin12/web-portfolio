@@ -1,30 +1,17 @@
 import React, { useState } from "react";
-import SkillBox from "../../../components/common/skill/SkillBox";
 import SkillProgram from "./SkillProgram";
+import DetailTemplate from "../../../components/common/detailTemplate/DetailTemplate";
 
-function DetailSkills({ styles, project, layout }) {
-  const skills = Object.keys(project.skills[0]);
-  const skillList = skills.map((key) => {
-    return {
-      name: key,
-      detail: project.skills[0][key],
-    };
-  });
+function DetailSkills({ project }) {
+  const skills = project.skills;
+
 
   return (
-    <li className={styles.projectDetailBox}>
-      <div className={styles.titleWrapper}>
-        {/* 왼쪽 wrapper */}
-        <div className={styles.title}>skills</div>
-      </div>
-      {/* 오른쪽 wrapper */}
-
-      <div className={styles.infoWrapper}>
-        {skillList.map((skill, i) => {
-          return <SkillProgram key={i} styles={styles} skillList={skill} />;
-        })}
-      </div>
-    </li>
+    <DetailTemplate title={"skills"}>
+      {skills.map((skill, i) => {
+        return <SkillProgram key={i} skillList={skill} />;
+      })}
+    </DetailTemplate>
   );
 }
 

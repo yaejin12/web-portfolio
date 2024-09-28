@@ -13,7 +13,7 @@ function ProjectList({ styles, project }) {
     { name: "GitHub", link: url.github },
   ];
 
-  console.log(links);
+
 
   return (
     <>

@@ -1,25 +1,31 @@
 import React from "react";
+import DetailTemplate from "../../../components/common/detailTemplate/DetailTemplate";
+import ProjectWorkDetail from "./ProjectWorkDetail";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 
 function ProjectWork({ styles }) {
+  const paramsId = useParams();
+
+  const projectDummy = useSelector((action) => action.project.dummy);
+  const project = projectDummy.find(
+    (project) => project.id === parseInt(paramsId.id)
+  );
+
+
+
   return (
-    <li className={styles.projectDetailBox}>
-      {/* 왼쪽 wrapper */}
-      <div className={styles.titleWrapper}>
-        <div className={styles.title}>내가 기여한 부분</div>
-      </div>
-
-      {/* 오른쪽 wrapper */}
-
-      <div className={styles.infoWrapper}>
-        <div className={styles.skillInfo}>
-          <p className={styles.skillListName}>
-            메인페이지
-            <p>frontEnd & BackEnd</p>
-          </p>
-          <p className={styles.skillKind}></p>
-        </div>
-      </div>
-    </li>
+    <DetailTemplate title={"내가 기여한 부분"}>
+      {project.works.map((project) => {
+        return (
+          <ProjectWorkDetail
+            key={project.id}
+            styles={styles}
+            project={project}
+          />
+        );
+      })}
+    </DetailTemplate>
   );
 }
 

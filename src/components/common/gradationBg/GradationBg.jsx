@@ -15,7 +15,7 @@ function GradationBg({ children }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsMouseMove(true);
-    }, 3000);
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, []);

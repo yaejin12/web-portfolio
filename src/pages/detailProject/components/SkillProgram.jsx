@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import SkillBox from "../../../components/common/skill/SkillBox";
+import styles from "../DetailProject.module.scss"
 
-function SkillProgram({ styles, skillList }) {
-  console.log(skillList.detail);
+function SkillProgram({ skillList }) {
+
   const detail = skillList.detail;
 
   return (
-    // <div className={styles.skillInfoWrapper}>
+
     <div className={styles.info}>
       <p className={styles.listName}>{skillList.name}</p>
       <p className={styles.infoDetailText}>
@@ -15,7 +16,7 @@ function SkillProgram({ styles, skillList }) {
         })}
       </p>
     </div>
-    // </div>
+  
   );
 }
 
