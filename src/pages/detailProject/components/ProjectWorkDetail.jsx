@@ -15,16 +15,24 @@ function ProjectWorkDetail({ styles, project }) {
       </div>
       <div className={styles.infoDetailText}>
         {/* //  오른쪽 디테일 내용 */}
-        {text.map((text) => {
+        {text.map((text, i) => {
           return (
-            <>
+            // key 를 작성하려면 <React.Fragment>를 적어야함 <></> 로는 키 값 부여 못한다
+            <React.Fragment key={i}>
               <div className={styles.detailWork}>{text.title}</div>
 
               {/* 기능 상세 정보 */}
-              {text.detail.map((detail) => {
-                return <div className={styles.detailWorkSubText}>{detail}</div>;
+              {text.detail.map((detail, Index) => {
+                return (
+                  <div
+                    key={`${i}-${Index}`}
+                    className={styles.detailWorkSubText}
+                  >
+                    {detail}
+                  </div>
+                );
               })}
-            </>
+            </React.Fragment>
           );
         })}
       </div>

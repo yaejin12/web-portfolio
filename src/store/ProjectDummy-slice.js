@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import meeting from "../assets/images/img/meeting.png";
 import meetingLogo from "../assets/images/icons/meetingLogo.svg";
-import fivejoSub from "../assets/images/img/5jo_detail.png";
 import fivejo from "../assets/images/img/5jo.png";
 import fivejoSignUp from "../assets/images/img/5jo_signUp.png";
 import fivejoDetail1 from "../assets/images/img/5jo_detail1.png";

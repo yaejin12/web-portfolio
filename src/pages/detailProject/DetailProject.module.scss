@@ -154,7 +154,7 @@
 }
 
 // ========================
-// 비디오 업로드
+// 비디오
 // ========================
 .videoWrapper {
   display: flex;
@@ -164,18 +164,78 @@
   width: 1400px;
   aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
 }
-.video {
-  width: 100%;
-  height: 100%;
+
+// ========================
+// 이미지
+// ========================
+
+.imgSubWrapper {
+  overflow: hidden;
+  width: 1400px;
+
+  .imgSubInner {
+    display: flex;
+  }
+
+  // 원본 애니메이션
+  .original {
+    display: flex;
+    animation: 40s linear infinite normal none running infiniteAnimation1;
+
+    &.stop {
+      animation-play-state: paused;
+    }
+  }
+
+  // 복제본 애니메이션
+  .clone {
+    display: flex;
+    animation: 40s linear infinite infiniteAnimation2;
+    &.stop {
+      animation-play-state: paused;
+    }
+  }
 }
 
-.img {
-  width: 100%;
-  height: 100%;
-  margin-top: 15px;
+/* 각 슬라이더 항목 */
+.imgSubItem {
+  height: auto;
+  width: 1000px;
+  display: flex;
+  flex-shrink: 0;
+  padding: 10px;
+  text-align: center;
+  flex-wrap: nowrap;
 
-  &:nth-child(1) {
-    margin-top: 0;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// 무한 롤링 애니메이션
+
+@keyframes infiniteAnimation1 {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  50.1% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes infiniteAnimation2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
   }
 }
 
