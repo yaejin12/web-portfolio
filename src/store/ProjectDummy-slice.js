@@ -1,6 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import meeting from "../assets/images/img/meeting.png";
+import meetingLogo from "../assets/images/icons/meetingLogo.svg";
+import fivejoSub from "../assets/images/img/5jo_detail.png";
 import fivejo from "../assets/images/img/5jo.png";
+import fivejoSignUp from "../assets/images/img/5jo_signUp.png";
+import fivejoDetail1 from "../assets/images/img/5jo_detail1.png";
+import fivejoDetail2 from "../assets/images/img/5jo_detail2.png";
+import fivejoDetail3 from "../assets/images/img/5jo_detail3.png";
 
 const initialState = {
   dummy: [
@@ -14,19 +20,20 @@ const initialState = {
       team: "3on3 조",
       img: meeting,
       video: "https://www.youtube.com/watch?v=qVWxRTHgnik&feature=youtu.be",
+      subImg: [],
       url: {
         portfolio: `/project/1`,
         github: "https://github.com/3on3",
         site: "http://gwating.com/",
       },
 
-      overview: {
-        1: "학교나 학과를 기반으로 네트워크를 형성할 수 있어, 학생들이 더욱 신뢰할 수 있는 인맥을 구축하는 데 도움을 줍니다.",
-        2: "원하는 지역과 인원 수에 맞춰 검색이 가능하여 편리하게 과팅을 진행할 수 있습니다.",
-        3: "채팅 기능을 통해 실제 만남 전에 상대방에 대해 미리 알아볼 수 있습니다.",
-        4: "알림, 결제 등 과팅을 원활하게 돕는 다양한 기능이 제공됩니다.",
-        5: "유저들이 멤버십 결제를 통해 다른 유저의 프로필 사진을 확인할 수 있도록 설계하여, 추가적인 기능을 제공하면서 자연스럽게 결제를 유도하는 수익 구조입니다.",
-      },
+      overview: [
+        "학교나 학과를 기반으로 네트워크를 형성할 수 있어, 학생들이 더욱 신뢰할 수 있는 인맥을 구축하는 데 도움을 줍니다.",
+        "원하는 지역과 인원 수에 맞춰 검색이 가능하여 편리하게 과팅을 진행할 수 있습니다.",
+        "채팅 기능을 통해 실제 만남 전에 상대방에 대해 미리 알아볼 수 있습니다.",
+        "알림, 결제 등 과팅을 원활하게 돕는 다양한 기능이 제공됩니다.",
+        "유저들이 멤버십 결제를 통해 다른 유저의 프로필 사진을 확인할 수 있도록 설계하여, 추가적인 기능을 제공하면서 자연스럽게 결제를 유도하는 수익 구조입니다.",
+      ],
 
       skills: [
         {
@@ -74,7 +81,7 @@ const initialState = {
         {
           id: 1,
           workPage: "메인페이지",
-          workSkill: "FrondEnd & BackEnd",
+          workSkill: "FrontEnd & BackEnd",
           text: [
             {
               title: "미팅을 원하는 사용자 그룹 목록 조회 가능",
@@ -101,7 +108,7 @@ const initialState = {
         {
           id: 2,
           workPage: "익명게시판 덧글",
-          workSkill: "FrondEnd & BackEnd",
+          workSkill: "FrontEnd & BackEnd",
           text: [
             {
               title: "각 게시물에 익명으로 댓글 작성 가능",
@@ -120,7 +127,7 @@ const initialState = {
         {
           id: 3,
           workPage: "그 외",
-          workSkill: "FrondEnd",
+          workSkill: "FrontEnd",
           text: [
             {
               title: "페이지 생성",
@@ -149,17 +156,18 @@ const initialState = {
       team: "편히 쉬 조",
       img: fivejo,
       video: "",
+      subImg: [fivejoDetail1, fivejoDetail2, fivejoDetail3, fivejoSignUp],
       url: {
         portfolio: "/project/2",
         github: "https://github.com/project5jo",
       },
 
-      overview: {
-        1: "사용자가 편하게 자신의 생각을 정리하고, 익명으로 타인과 소통할 수 있는 공간을 제공합니다. ",
-        2: "핵심 기능은 실시간 채팅, 다양한 주제를 통한 소통, 감성적인 디자인을 적용한 배경화면 등입니다. ",
-        3: "테라피 용품 소개 및 판매를 통해 추가적인 수익 모델도 함께 제시하고 있습니다. ",
-        4: "이로써 사용자들이 정서적 안정과 함께 더 나은 소통 환경을 누릴 수 있도록 돕는 것이 목표입니다.",
-      },
+      overview: [
+        "사용자가 편하게 자신의 생각을 정리하고, 익명으로 타인과 소통할 수 있는 공간을 제공합니다. ",
+        "핵심 기능은 실시간 채팅, 다양한 주제를 통한 소통, 감성적인 디자인을 적용한 배경화면 등입니다. ",
+        "테라피 용품 소개 및 판매를 통해 추가적인 수익 모델도 함께 제시하고 있습니다. ",
+        "이로써 사용자들이 정서적 안정과 함께 더 나은 소통 환경을 누릴 수 있도록 돕는 것이 목표입니다.",
+      ],
 
       skills: [
         {
@@ -201,7 +209,7 @@ const initialState = {
         {
           id: 1,
           workPage: "로그인",
-          workSkill: "FrondEnd & BackEnd",
+          workSkill: "FrontEnd & BackEnd",
           text: [
             {
               title: "로그인 & 자동 로그인",
@@ -224,7 +232,7 @@ const initialState = {
         {
           id: 2,
           workPage: "주문 결제",
-          workSkill: "FrondEnd & BackEnd",
+          workSkill: "FrontEnd & BackEnd",
           text: [
             {
               title: "장바구니에 담겨있는 제품 렌더링",
@@ -243,7 +251,7 @@ const initialState = {
         {
           id: 3,
           workPage: "그 외",
-          workSkill: "FrondEnd",
+          workSkill: "FrontEnd",
           text: [
             {
               title: "전체적인 디자인 방향성 제시",

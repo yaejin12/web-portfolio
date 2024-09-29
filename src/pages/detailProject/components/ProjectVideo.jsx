@@ -6,7 +6,7 @@ function ProjectVideo({ styles, project }) {
     <li className={styles.projectDetailBox}>
       <div className={styles.skillTitleWrapper}>
         <div className={styles.videoWrapper}>
-          {styles.video && (
+          {project.video ? (
             <ReactPlayer
               className={styles.video}
               url={project.video}
@@ -14,8 +14,11 @@ function ProjectVideo({ styles, project }) {
               width="100%"
               height="100%"
             />
+          ) : (
+            project.subImg.map((img, i) => (
+              <img key={i} className={styles.img} src={img}></img>
+            ))
           )}
-          
         </div>
       </div>
     </li>

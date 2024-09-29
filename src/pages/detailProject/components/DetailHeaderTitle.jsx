@@ -42,8 +42,8 @@ function DetailHeaderTitle({ styles, project }) {
 
         {/* 오른쪽 하단 wrapper*/}
         <div className={styles.projectInfoBottomWrapper}>
-          {Object.keys(project.overview).map((value, i) => (
-            <p key={i}>{project.overview[value]} </p>
+          {project.overview.map((value, i) => (
+            <p key={i}>{value} </p>
           ))}
         </div>
       </div>
