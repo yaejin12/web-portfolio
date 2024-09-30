@@ -1,12 +1,11 @@
 import React from "react";
+import img from "../../assets/images/img/jin_profile.png";
+import Experience from "./components/Experience";
+import SkillsTools from "./components/SkillsTools";
+import Education from "./components/Education";
 import styles from "./MyIntroduce.module.scss";
-import img from "../../../assets/images/img/jin_profile.png";
-import Education from "./Education";
-import { Exception } from "sass";
-import Experience from "./Experience";
-import SkillsTools from "./SkillsTools";
 
-function MyIntroduce({Rendering}) {
+function MyIntroduce({ Rendering }) {
   return (
     <div className={styles.myIntroduce}>
       <ul className={styles.profileWrapper}>

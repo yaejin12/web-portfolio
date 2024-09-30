@@ -5,10 +5,10 @@ import styles from "../Project.module.scss";
 function ProjectListBtn({ links }) {
   return (
     <div className={styles.projectLink}>
-      {links.map((btn) => {
+      {links.map((btn, i) => {
         return (
           btn.link && (
-            <span>
+            <span key={i}>
               <DetailBtn
                 text={btn.name}
                 detailIcon={!(btn.name === "GitHub") ? detailIcon : null}

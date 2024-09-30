@@ -1,6 +1,5 @@
 import React from "react";
-import MenuNav from "./MenuNav";
-import SocialNav from "./SocialNav";
+import MenuNav from "./components/MenuNav";
 
 function Header({ styles }) {
   return (

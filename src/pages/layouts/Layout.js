@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./components/Header";
 import { Outlet, useLocation } from "react-router-dom";
 import styles from "./Layout.module.scss";
-import SocialNav from "./components/SocialNav";
+import Header from "./Header";
+import SocialNav from "./SocialNav.js";
 
 function Layout() {
   const location = useLocation();

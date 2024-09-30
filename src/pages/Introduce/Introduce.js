@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Introduce.module.scss";
 import About from "./components/About";
-import MyIntroduce from "./components/MyIntroduce";
+import MyIntroduce from "./MyIntroduce";
 
 function Introduce() {
   const [Rendering, setRendering] = useState(false);
@@ -17,7 +17,7 @@ function Introduce() {
       <div className={styles.inner}>
         {/* about Me Text */}
         {Rendering ? (
-          <MyIntroduce Rendering={Rendering} />
+          <MyIntroduce Rendering={Rendering}/>
         ) : (
           <About styles={styles} />
         )}

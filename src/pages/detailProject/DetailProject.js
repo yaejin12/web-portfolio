@@ -1,7 +1,7 @@
 import React from "react";
 import GradationBg from "../../components/common/gradationBg/GradationBg";
 import styles from "./DetailProject.module.scss";
-import DetailHeader from "./components/DetailHeader";
+import DetailHeader from "./DetailHeader";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 function DetailProject() {

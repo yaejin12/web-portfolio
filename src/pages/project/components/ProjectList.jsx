@@ -1,19 +1,21 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import ProjectListHeader from "./ProjectListHeader";
 import ProjectListBtn from "./ProjectListBtn";
 
 function ProjectList({ styles, project }) {
-  const { url } = project;
+  const { url, id } = project;
+  const location = useLocation();
+  console.log("location", location);
 
   // 링크 정보와 이름을 매핑
   const links = [
-    { name: "바로가기", link: url.portfolio },
+    { name: "상세보기", link: `${location.pathname}/${id}` },
     { name: "사이트", link: url.site },
     { name: "GitHub", link: url.github },
   ];
 
-
+  console.log("links", links);
 
   return (
     <>

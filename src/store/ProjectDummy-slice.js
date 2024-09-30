@@ -21,9 +21,11 @@ const initialState = {
       video: "https://www.youtube.com/watch?v=qVWxRTHgnik&feature=youtu.be",
       subImg: [],
       url: {
-        portfolio: `/project/1`,
         github: "https://github.com/3on3",
         site: "http://gwating.com/",
+        notion:
+          "https://aged-sea-aed.notion.site/5658f2d2fbd54e11a2b3525bfd048bce",
+        ppt: "https://www.canva.com/design/DAGOv7BsxsI/OELVr2tf_w7rOtJAkvajKQ/view?utm_content=DAGOv7BsxsI&utm_campaign=designshare&utm_medium=link&utm_source=editor",
       },
 
       overview: [
@@ -157,7 +159,6 @@ const initialState = {
       video: "",
       subImg: [fivejoDetail1, fivejoDetail2, fivejoDetail3, fivejoSignUp],
       url: {
-        portfolio: "/project/2",
         github: "https://github.com/project5jo",
       },
 

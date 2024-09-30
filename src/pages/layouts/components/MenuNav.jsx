@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink, useLocation, useParams } from "react-router-dom";
-import backImg from "../../../assets/images/icons/back.svg";
 
 function MenuNav({ styles }) {
   const location = useLocation();

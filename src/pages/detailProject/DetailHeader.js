@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "../DetailProject.module.scss";
-import DetailHeaderTitle from "./DetailHeaderTitle";
-import DetailMainImg from "./DetailMainImg";
-import DetailSkills from "./DetailSkills";
-import ProjectWork from "./ProjectWork";
-import ProjectVideo from "./ProjectVideo";
+import styles from "./DetailProject.module.scss";
+import DetailHeaderTitle from "./components/DetailHeaderTitle";
+import DetailMainImg from "./components/DetailMainImg";
+import DetailSkills from "./components/DetailSkills";
+import ProjectWork from "./components/ProjectWork";
+import ProjectVideo from "./components/ProjectVideo";
 
 function DetailHeader({ project }) {
   return (
@@ -12,7 +12,7 @@ function DetailHeader({ project }) {
       <DetailHeaderTitle styles={styles} project={project} />
       <DetailMainImg styles={styles} project={project} />
       <DetailSkills styles={styles} project={project} />
-      <ProjectVideo styles={styles} project={project}/>
+      <ProjectVideo styles={styles} project={project} />
       <ProjectWork styles={styles} project={project} />
     </ul>
   );
