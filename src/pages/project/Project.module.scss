@@ -1,6 +1,6 @@
 .projectWrapper {
   width: 100%;
-  padding: 130px;
+  padding: calc(100vw * (130 / 1920));
   position: relative;
   z-index: 999;
 
@@ -16,8 +16,7 @@
 
   .projectList {
     .projectBox {
-      padding: 50px 10px;
-      // border-bottom: 1px solid var(--color-bk);
+      padding: calc(100vw * (50 / 1920)) calc(100vw * (10 / 1920));
       border-top: 1px solid var(--color-bk);
 
       display: flex;
@@ -31,33 +30,32 @@
 
       // 버튼
       .projectLink {
-        // width: 200px;
         display: flex;
 
         span {
-          margin-right: 7px;
+          margin-right: calc(100vw * (7 / 1920));
         }
       }
 
       // img
 
       .projectImgWrapper {
-        width: 712px;
-        height: 410px;
+        width: calc(100vw * (860 / 1920));
+        height: 100%;
       }
     }
   }
 }
 
 .projectText {
-  font-size: 43px;
-  line-height: 140%;
+  font-size: calc(100vw * (50 / 1920));
+  line-height: 130%;
   font-weight: 600;
 
   .infoDetail {
-    font-size: 23px;
+    font-size: calc(100vw * (23 / 1920));
     font-weight: 500;
-    margin-top: 30px;
+    margin-top: calc(100vw * (30 / 1920));
     line-height: 170%;
   }
 }

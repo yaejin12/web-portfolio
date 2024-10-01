@@ -14,13 +14,13 @@ function DetailProject() {
   );
 
   return (
-    <GradationBg>
-      <div className={styles.detailProjectWrapper}>
-        <div className={styles.inner}>
-          <DetailHeader project={project} />
-        </div>
+    // <GradationBg>
+    <div className={styles.detailProjectWrapper}>
+      <div className={styles.inner}>
+        <DetailHeader project={project} />
       </div>
-    </GradationBg>
+    </div>
+    // </GradationBg>
   );
 }
 
