@@ -21,6 +21,8 @@ function SocialNav({ styles }) {
       setProject(projectDummy.find((project) => project.id === parseInt(id)));
 
       console.log("project!", project);
+    } else {
+      setProject({});
     }
   }, [isDetailPage, id, projectDummy]);
 
