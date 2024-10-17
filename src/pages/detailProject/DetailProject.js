@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import GradationBg from "../../components/common/gradationBg/GradationBg";
 import styles from "./DetailProject.module.scss";
 import DetailHeader from "./DetailHeader";

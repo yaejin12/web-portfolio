@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import DetailTemplate from "../../../components/common/detailTemplate/DetailTemplate";
 import ProjectWorkDetail from "./ProjectWorkDetail";
 import { useSelector } from "react-redux";
@@ -11,8 +11,6 @@ function ProjectWork({ styles }) {
   const project = projectDummy.find(
     (project) => project.id === parseInt(paramsId.id)
   );
-
-
 
   return (
     <DetailTemplate title={"내 역할"}>

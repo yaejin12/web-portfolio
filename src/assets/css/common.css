@@ -2,7 +2,7 @@
 
 html,
 body {
-  font-size: calc(100vw * (15 / 1920));
+  font-size: calc(100vw * (15 / 1700));
   width: 100%;
   height: auto;
 }
@@ -13,7 +13,7 @@ body {
 
 .inner {
   width: 100%;
-  max-width: 1400px;
+  max-width: calc(100vw * (1400 / 1700));
   margin: 0 auto;
 }
 
@@ -27,6 +27,7 @@ body {
   --color-bk: #161616;
   --color-gr: #7a7a7a;
   --color-point: #8ec5fc;
+  --color-main: #3c48f1;
   --color-wh: #f7fbff;
   --color-error: #ff0000;
 }

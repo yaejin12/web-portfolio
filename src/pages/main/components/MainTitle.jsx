@@ -1,23 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 function MainTitle({ styles }) {
-  const [time, setTime] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setTime(true);
-    }, 1200);
-  }, []);
-
   return (
-    <div className={styles.titleWrapper}>
-      <div className={styles.title}>함께 성장하고싶은,</div>
+    <>
       <div className={styles.title}>
-        <p> 신입개발자</p>
-        <p className={time ? styles.line : ""}></p>
-        <p>이예진 입니다.</p>
+        도전에 대한 열정이 넘치며, <br />
+        팀과 함께 성장하고 싶은 <br /> <span>개발자 이예진</span>
+        입니다.
       </div>
-    </div>
+    </>
   );
 }
 

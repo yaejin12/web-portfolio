@@ -6,7 +6,6 @@ import ProjectListBtn from "./ProjectListBtn";
 function ProjectList({ styles, project }) {
   const { url, id } = project;
   const location = useLocation();
-  console.log("location", location);
 
   // 링크 정보와 이름을 매핑
   const links = [
@@ -14,8 +13,6 @@ function ProjectList({ styles, project }) {
     { name: "사이트", link: url.site },
     { name: "GitHub", link: url.github },
   ];
-
-  console.log("links", links);
 
   return (
     <>
