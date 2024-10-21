@@ -1,10 +1,14 @@
 import React from "react";
 import MenuNav from "./components/MenuNav";
+import Logo from "./components/Logo";
 
 function Header({ styles }) {
   return (
     <header>
-      <MenuNav styles={styles} />
+      <div className={styles.headerWrapper}>
+        <Logo styles={styles} />
+        <MenuNav styles={styles} />
+      </div>
     </header>
   );
 }

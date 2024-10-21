@@ -2,7 +2,7 @@
 
 html,
 body {
-  font-size: calc(100vw * (15 / 1700));
+  font-size: 16px;
   width: 100%;
   height: auto;
 }
@@ -13,7 +13,8 @@ body {
 
 .inner {
   width: 100%;
-  max-width: calc(100vw * (1400 / 1700));
+  padding: 0 60px 200px 0;
+
   margin: 0 auto;
 }
 
@@ -24,14 +25,15 @@ body {
 
 /* 루트 */
 :root {
-  --color-bk: #161616;
+  --color-bk: #171717;
   --color-gr: #7a7a7a;
-  --color-point: #8ec5fc;
-  --color-main: #3c48f1;
-  --color-wh: #f7fbff;
+  --color-point: #f56e50;
+  --color-wh: #f4f0ed;
   --color-error: #ff0000;
 }
 
 *::-webkit-scrollbar {
   display: none;
 }
+
+

@@ -1,13 +1,9 @@
 .skillBox {
-  padding: calc(100vw * (7 / 1700)) calc(100vw * (17 / 1700));
-  font-size: calc(100vw * (15 / 1700));
-  border-radius: calc(100vw * (40 / 1700));
-  border: calc(100vw * (1 / 1700)) solid #fff;
-  margin-right: calc(100vw * (5 / 1700));
-
-  &.Bk {
-    border: calc(100vw * (1 / 1700)) solid var(--color-gr);
-    color: var(--color-bk);
-    font-size: calc(100vw * (20 / 1700));
-  }
+  padding: 10px 20px;
+  border-radius: 60px;
+  font-size: 30px;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-right: 5px;
+  color: rgba(rgb(244, 240, 237), 0.7);
 }

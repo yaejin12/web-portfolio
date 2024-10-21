@@ -1,6 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import meeting from "../assets/images/img/meeting.png";
-import meetingLogo from "../assets/images/icons/meetingLogo.svg";
 import fivejo from "../assets/images/img/5jo.png";
 import fivejoSignUp from "../assets/images/img/5jo_signUp.png";
 import fivejoDetail1 from "../assets/images/img/5jo_detail1.png";
@@ -17,7 +15,7 @@ const initialState = {
       infoBr: "소통과 만남을 중개해주는 플랫폼입니다.",
       date: "2024. 7. 17 - 2024. 8. 29",
       team: "3on3 조",
-      img: meeting,
+      // img: meeting,
       video: "https://www.youtube.com/watch?v=qVWxRTHgnik&feature=youtu.be",
       subImg: [],
       url: {

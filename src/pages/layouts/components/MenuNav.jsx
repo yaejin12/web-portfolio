@@ -1,38 +1,28 @@
-import React from "react";
-import { NavLink, useLocation, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 
 function MenuNav({ styles }) {
-  const location = useLocation();
-  const { id } = useParams();
-  const isIntroduce = location.pathname === "/introduce";
-  const isProject = location.pathname === "/project";
-
-  const ClassFn = () => {
-    if (isIntroduce) {
-      return styles.isIntroduce;
-    }
-    if (isProject || location.pathname.includes("/project")) {
-      return styles.isProject;
-    } else {
-      return "";
-    }
+  const [isClose, setIsClose] = useState(false);
+  const closeClickHandler = () => {
+    setIsClose(!isClose);
   };
 
+  const isRef = useSelector((state) => state.isBlackRef.isBlackRef);
+
   return (
-    <nav className={styles.menu}>
-      <div className={styles.inner}>
-        <ul className={`${styles.gnb} ${ClassFn()}`}>
-          <li className={styles.nav}>
-            <NavLink to="/introduce">
-              <div className={styles.intro}>INTRODUCE</div>
-            </NavLink>
-            <NavLink to={"/project"}>
-              <div className={styles.project}>PROJECT</div>
-            </NavLink>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div
+      className={`${styles.menuWrapper} ${isClose ? styles.close : ""}`}
+      onClick={closeClickHandler}
+    >
+      <div
+        style={{ backgroundColor: isRef ? "#fff" : "" }}
+        className={styles.menuLine}
+      />
+      <div
+        style={{ backgroundColor: isRef ? "#fff" : "" }}
+        className={styles.menuLine}
+      />
+    </div>
   );
 }
 

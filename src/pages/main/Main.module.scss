@@ -1,93 +1,103 @@
-// Main title css
-
-.mainWrapper {
+section {
+  position: relative;
+  
+}
+.mainBannerSection {
   width: 100%;
   height: 100vh;
-  // height: calc(100vw * (930 / 1700));
+
   display: flex;
+  padding: 100px 0 0 100px;
 }
 
+// Main title css
 .titleWrapper {
-  background-color: #fff;
-  // width: calc(100vw * (900 / 1700));
-  width: 100%;
-  padding: calc(100vw * (120 / 1700)) calc(100vw * (130 / 1700))
-    calc(100vw * (120 / 1700)) calc(100vw * (130 / 1700));
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  .title {
-    width: 100%;
-    font-size: calc(100vw * (45 / 1700));
-    // font-weight: 500;
-    line-height: 170%;
-    padding-bottom: calc(100vw * (150 / 1700));
-    // 위로 떠오르는 애니메이션
-    animation: chatAni 1.2s ease-out forwards;
+  letter-spacing: -4px;
 
-    span {
-      // color: var(--color-main);
-      font-weight: 600;
+  .text {
+    font-size: 220px;
+    line-height: 110%;
+    font-weight: 700;
+
+    &:nth-child(1) {
+      display: flex;
+
+      // lee
+      p:nth-child(1) {
+        margin-right: 60px;
+      }
+      // yae
+      p:nth-child(2) {
+        font-style: italic;
+        font-weight: 400;
+        margin-right: 60px;
+      }
+
+      // jin
+      // p:nth-child(3) {
+      // }
+    }
+
+    // Frontend
+    &:nth-child(2) {
+      margin-left: 250px;
+    }
+
+    // Portfolio
+    &:nth-child(3) {
+      font-style: italic;
+      // color: var(--color-point);
     }
   }
 
-  .gnb {
-    // background-color: #cdc1c1;
-    margin-top: calc(100vw * (50 / 1700));
-    width: calc(100vw * (350 / 1700));
-
-    .menu {
-      border-bottom: calc(100vw * (1 / 1700)) solid var(--color-bk);
-
-      .titleMenuWrapper {
-        height: calc(100vw * (95 / 1700));
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .titleMenu {
-        font-size: calc(100vw * (27 / 1700));
-        display: flex;
-        align-items: center;
-      }
-
-      .subMenuWrapper {
-        display: none;
-        margin-bottom: calc(100vw * (15 / 1700));
-
-        .subMenu {
-          font-size: calc(100vw * (17 / 1700));
-          padding-bottom: calc(100vw * (14 / 1700));
-          display: flex;
-          align-items: center;
-        }
-      }
+  // git
+  .git {
+    display: flex;
+    height: 100%;
+    align-items: end;
+    font-size: 25px;
+    margin-bottom: 70px;
+    font-weight: 800;
+    img {
+      margin-left: 20px;
+      padding-bottom: 7px;
+      width: 30px;
+      object-fit: contain;
+      background-repeat: no-repeat;
     }
   }
 }
 
-.subWrapper {
+// 캐릭터
+.charaterWrapper {
   width: 100%;
-  height: calc(100vw * (930 / 1700));
-  background-image: url("../../assets/images/img/main.jpg");
-  background-size: cover;
-  background-position: 10% 85%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  height: 100%;
+  // overflow: hidden;
+  position: relative;
 
-  .subInner {
-    padding-right: calc(100vw * (150 / 1700));
-  }
-}
+  img {
+    width: 100%;
+    // height: 100%;
+    object-fit: contain;
+    background-repeat: no-repeat;
 
-/* 애니메이션 정의 */
-@keyframes expandLine {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: calc(100vw * (400 / 1700));
+    &:nth-child(2) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+    &.isView {
+      opacity: 1;
+    }
   }
 }
 
