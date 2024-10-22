@@ -5,7 +5,7 @@ import { closeMenuReducer } from "./BlackRef-slice";
 // 단일 리덕스 스토어 생성
 const store = configureStore({
   reducer: {
-    project: projectReducer,
+    projectSkills: projectReducer,
     isBlackRef: isBlackRef,
     isCloseMenu: closeMenuReducer,
   },

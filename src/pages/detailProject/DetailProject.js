@@ -2,13 +2,15 @@ import React from "react";
 import DetailTop from "./components/DetailTop";
 import stylesTop from "./DetailProject.module.scss";
 import MyContribution from "./components/MyContribution";
-import styles from "./DetailProject.module.scss";
+import DetailStyles from "./DetailProject.module.scss";
+import DetailSkills from "./components/DetailSkills";
 
 function DetailProject() {
   return (
     <>
       <DetailTop styles={stylesTop} />
-      <MyContribution styles={styles} />
+      <DetailSkills styles={DetailStyles} />
+      <MyContribution styles={DetailStyles} />
     </>
   );
 }

@@ -6,7 +6,6 @@ import DetailInfo from "./DetailInfo";
 import DetailHeader from "./DetailHeader";
 
 function DetailTop({ styles }) {
-  const projectDummy = useSelector((action) => action.project.dummy);
   return (
     <section>
       <div className={styles.projectSection}>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import iconOpen from "../../../assets/images/icons/arrow_url.svg";
-import Url from "../../../assets/images/icons/flower_icon_B.svg";
+
 
 function MyContribution({ styles }) {
   // ================
