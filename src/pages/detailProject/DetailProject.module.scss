@@ -1,0 +1,229 @@
+section {
+  height: 100%;
+}
+
+.projectSection {
+  background-color: var(--color-bk);
+  color: var(--color-wh);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 140px 100px 100px 100px;
+
+  h1 {
+    font-size: 110px;
+    line-height: 110%;
+    font-weight: 800;
+    letter-spacing: -5px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    span {
+      font-size: 80px;
+      margin-left: 30px;
+    }
+  }
+
+  h2 {
+    line-height: 150%;
+    font-size: 21px;
+    text-align: center;
+    font-weight: 500;
+
+    p {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: 400;
+      span {
+        margin-left: 60px;
+      }
+    }
+  }
+
+  .videoWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 850px;
+    aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
+  }
+}
+
+// ===================
+// detailInfo
+
+.detailInfoWrapper {
+  // width: 100%;
+  // height: 100%;
+  display: flex;
+
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 430px;
+    height: 430px;
+    border-radius: 50%;
+    border: 1px solid var(--color-wh);
+    padding: 30px;
+
+    margin-bottom: 50px;
+
+    &:nth-child(1) {
+      transform: translateX(35px);
+    }
+    &:nth-child(2) {
+      border: 1px dashed var(--color-wh);
+    }
+    &:nth-child(3) {
+      transform: translateX(-35px);
+    }
+
+    p {
+      padding: 0 48px;
+      font-size: 21px;
+      line-height: 220%;
+      text-align: center;
+      font-weight: 400;
+      span {
+        font-weight: 700;
+        color: var(--color-point);
+      }
+    }
+  }
+}
+
+// ===================
+// MyContribution
+// ===================
+.myContributionSection {
+  background-color: var(--color-wh);
+  color: var(--color-bk);
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 140px 100px 100px 100px;
+
+  h1 {
+    font-size: 110px;
+    line-height: 110%;
+    font-weight: 800;
+    letter-spacing: -5px;
+
+    span {
+      font-size: 80px;
+      margin-left: 30px;
+    }
+  }
+
+  .contributionWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    .urlWrapper {
+      color: var(--color-wh);
+      display: flex;
+      .url {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        font-weight: 600;
+        margin-right: 10px;
+        cursor: pointer;
+
+        background-image: url("../../assets/images/icons/flower_icon_B.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        &:hover {
+          transition: all 0.3s ease;
+          transform: translateY(-10px);
+        }
+      }
+    }
+    // 내 역할 박스
+    .Box {
+      width: 900px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 27px 0;
+      border-bottom: 1px solid var(--color-bk);
+      cursor: pointer;
+      &:nth-child(1) {
+        border-top: 1.2px solid var(--color-bk);
+      }
+
+      .contributionTitleWrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .contributionTitle {
+          font-size: 30px;
+          height: 60px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+          transition: transform 0.3s ease;
+        }
+      }
+
+      // 상세글
+      .contributionText {
+        display: flex;
+
+        p {
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+
+          margin-top: 9px;
+          font-size: 22px;
+          margin-right: 80px;
+          font-weight: 600;
+        }
+      }
+      &.open {
+        .contributionTitleWrapper {
+          .contributionTitle {
+            font-weight: 800;
+            // color: var(--color-point);
+          }
+          img {
+            transform: rotate(90deg);
+          }
+        }
+        .contributionText {
+          p {
+            opacity: 1;
+            max-height: 500px;
+            transition: opacity 0.3s ease, max-height 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+}

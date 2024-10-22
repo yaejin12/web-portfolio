@@ -8,8 +8,12 @@ import MySkill from "./components/MySkill";
 import { useDispatch } from "react-redux";
 import { toggleBlackRef } from "../../store/BlackRef-slice";
 import { useInView } from "react-intersection-observer";
+import { Outlet, useLocation } from "react-router-dom";
 
 function Main() {
+  const location = useLocation();
+  const isRootPath = location.pathname === "/";
+
   const [ref, inView] = useInView({
     threshold: 0.09,
   });
@@ -22,11 +26,17 @@ function Main() {
 
   return (
     <>
-      <MainBanner styles={mainStyles} />
-      <div style={{ height: "100%" }} ref={ref}>
-        <AboutMe styles={aboutMeStyles} />
-        <MySkill styles={aboutMeStyles} />
-      </div>
+      {isRootPath && (
+        <>
+          <MainBanner styles={mainStyles} />
+          <div style={{ height: "100%" }} ref={ref}>
+            <AboutMe styles={aboutMeStyles} />
+            <MySkill styles={aboutMeStyles} />
+          </div>
+          
+        </>
+      )}
+      <Outlet />
     </>
   );
 }

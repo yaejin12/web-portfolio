@@ -1,11 +1,9 @@
 import React from "react";
-import logo from "../../../assets/images/logo/logo.svg";
+import logo from "../../../assets/images/logo/logo_full.svg";
 
-function Logo({styles}) {
+function Logo({ styles }) {
   return (
-    <div className={styles.logo}>
-      {/* <img src={logo} alt="logo"/> */}
-    </div>
+    <div className={styles.logo}>{/* <img src={logo} alt="logo" /> */}</div>
   );
 }
 

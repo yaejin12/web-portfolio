@@ -4,14 +4,14 @@ import styles from "./Layout.module.scss";
 import Header from "./Header";
 import ScrollTop from "./ScrollTop.js";
 import Footer from "./Footer.js";
+import MenuClickPage from "./components/MenuClickPage.jsx";
 
 function Layout() {
-  const location = useLocation();
-
   return (
     <>
       <ScrollTop />
       <Header styles={styles} />
+      <MenuClickPage styles={styles} />
       <main>
         <Outlet />
       </main>

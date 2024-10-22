@@ -214,6 +214,10 @@ textarea:focus {
   outline: none;
 }
 
+.body-lock {
+  overflow: hidden;
+}
+
 /* select*/
 select {
   border-radius: 0;

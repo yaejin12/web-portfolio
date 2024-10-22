@@ -15,3 +15,19 @@ const BlackRefSlice = createSlice({
 
 export const { toggleBlackRef } = BlackRefSlice.actions;
 export default BlackRefSlice.reducer;
+
+const isCloseInitialState = {
+  isCloseMenu: false,
+};
+const isCloseMenu = createSlice({
+  name: "isCloseMenu",
+  initialState: isCloseInitialState,
+  reducers: {
+    toggleCloseMenu(state) {
+      state.isCloseMenu = !state.isCloseMenu;
+    },
+  },
+});
+
+export const closeMenuReducer = isCloseMenu.reducer;
+export const { toggleCloseMenu } = isCloseMenu.actions;

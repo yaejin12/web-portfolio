@@ -2,14 +2,14 @@ import { Children } from "react";
 import Main from "../pages/main/Main";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "../pages/layouts/Layout";
-// import DetailProject from "../pages/detailProject/DetailProject";
+import DetailProject from "../pages/detailProject/DetailProject";
 
-// const detailProject = [
-//   {
-//     path: ":id",
-//     element: <DetailProject />,
-//   },
-// ];
+const detailProject = [
+  {
+    path: ":id",
+    element: <DetailProject />,
+  },
+];
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -18,9 +18,8 @@ export const router = createBrowserRouter([
       {
         path: "",
         element: <Main />,
+        children: detailProject,
       },
-     
-   
     ],
   },
 ]);

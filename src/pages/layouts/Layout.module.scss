@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  height: 100px;
+  height: 130px;
   position: fixed;
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@ header {
 
   // 로고
   .logo {
-    width: 100px;
+    width: 0px;
     object-fit: contain;
     background-repeat: no-repeat;
   }
@@ -65,6 +65,80 @@ header {
     }
   }
 }
+// munu
+.menuClickWrapper {
+  &.open {
+    transform: translateX(0);
+  }
+  background-color: #333; /* 배경색 */
+  transform: translateY(-100%); /* 메뉴가 닫혔을 때는 화면 밖으로 */
+  transition: transform 0.3s ease;
+
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba($color: #171717, $alpha: 0.96);
+
+  .gnb {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+
+    // align-items: center;
+    p {
+      font-size: 80px;
+      font-weight: 700;
+      margin-bottom: 100px;
+      color: var(--color-wh);
+      position: relative;
+
+      // 메뉴 hover 효과
+      &:hover {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          margin-left: 30px;
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: url(../../assets//images/icons/flower_icon.svg);
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 9999;
+          animation: rotate 8s linear infinite;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          margin-right: 30px;
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: url(../../assets//images/icons/flower_icon.svg);
+          top: 50%;
+          // transform: translateY(50%);
+          left: -80px;
+          z-index: 9999;
+          animation: rotate 8s linear infinite;
+        }
+      }
+    }
+  }
+}
 
 // footer
 
@@ -102,5 +176,15 @@ footer {
       align-items: center;
       font-weight: 400;
     }
+  }
+}
+
+/* @keyframes 애니메이션 정의 */
+@keyframes rotate {
+  from {
+    transform: translateY(-50%) rotate(0deg); /* 시작 시 0도 */
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg); /* 끝날 때 360도 회전 */
   }
 }
