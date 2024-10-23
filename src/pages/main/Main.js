@@ -6,7 +6,7 @@ import AboutMe from "./components/AboutMe";
 import MySkill from "./components/MySkill";
 
 import { useDispatch } from "react-redux";
-import { toggleBlackRef } from "../../store/BlackRef-slice";
+import { toggleBlackRef } from "../../store/Toggle-slice";
 import { useInView } from "react-intersection-observer";
 import { Outlet, useLocation } from "react-router-dom";
 
@@ -33,7 +33,6 @@ function Main() {
             <AboutMe styles={aboutMeStyles} />
             <MySkill styles={aboutMeStyles} />
           </div>
-          
         </>
       )}
       <Outlet />

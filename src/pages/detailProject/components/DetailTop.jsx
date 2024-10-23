@@ -1,11 +1,11 @@
-import React from "react";
-
-import ReactPlayer from "react-player";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
 import DetailInfo from "./DetailInfo";
 import DetailHeader from "./DetailHeader";
 
+
 function DetailTop({ styles }) {
+
+
   return (
     <section>
       <div className={styles.projectSection}>

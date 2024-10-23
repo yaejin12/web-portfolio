@@ -1,13 +1,22 @@
 import React from "react";
 import SkillBox from "../../../components/common/skill/SkillBox";
 import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 function DetailSkills({ styles }) {
-  const meetingSkills = useSelector(
-    (state) => state.projectSkills.meetingSkills
-  );
+  const location = useLocation();
 
-  console.log("meetingSkills", meetingSkills);
+  const meetingSkills = useSelector((state) => {
+    if (location.pathname === "/1") {
+      return state.projectSkills.meetingSkills;
+    } else if (location.pathname === "/2") {
+      return state.projectSkills.healingPageSkills;
+    } else {
+      return null;
+    }
+  });
+
+
 
   return (
     <section className={styles.mySkillSection}>

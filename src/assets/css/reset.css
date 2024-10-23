@@ -323,56 +323,6 @@ select::-ms-expand {
 
 @font-face {
   font-display: swap;
-  font-family: "ppMori";
-  font-style: normal;
-  font-weight: 200;
-  src: url("../fonts/ppMori/PPMori-Extralight.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "ppMori";
-  font-style: italic;
-  font-weight: 200;
-  src: url("../fonts/ppMori/PPMori-ExtralightItalic.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "ppMori";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/ppMori/PPMori-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "ppMori";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/ppMori/PPMori-RegularItalic.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "ppMori";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/ppMori/PPMori-SemiBold.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "ppMori";
-  font-style: italic;
-  font-weight: 500;
-  src: url("../fonts/ppMori/PPMori-SemiBoldItalic.woff") format("woff");
-}
-
-/*  */
-
-@font-face {
-  font-display: swap;
   font-family: "SUITE";
   font-style: normal;
   font-weight: 300;

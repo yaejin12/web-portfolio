@@ -7,8 +7,12 @@ function SkillBox({ skills, title }) {
     <div className={styles.mySkillWrapper}>
       {title && <div className={styles.title}>{title}</div>}
       <div className={styles.skill}>
-        {skills?.map((skillText) => {
-          return <div className={styles.skillBox}>{skillText}</div>;
+        {skills?.map((skillText, i) => {
+          return (
+            <div key={i} className={styles.skillBox}>
+              {skillText}
+            </div>
+          );
         })}
       </div>
     </div>

@@ -10,7 +10,7 @@ function MainBanner({ styles }) {
   const changeImg = () => {
     setTimeout(() => {
       setIsFullImg(!isFullImg);
-    }, 3000);
+    }, 2500);
   };
 
   useEffect(() => {

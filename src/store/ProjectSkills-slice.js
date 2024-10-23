@@ -58,11 +58,11 @@ const initialState = {
   ],
 };
 
-const ProjectSlice = createSlice({
+const ProjectSkillsSlice = createSlice({
   name: "projectSkills",
   initialState,
   reducers: {},
 });
 
-export const ProjectAction = ProjectSlice.actions;
-export default ProjectSlice.reducer;
+export const ProjectAction = ProjectSkillsSlice.actions;
+export default ProjectSkillsSlice.reducer;
