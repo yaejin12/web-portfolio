@@ -1,251 +1,247 @@
-.detailProjectWrapper {
-  width: 100%;
-  padding: 130px;
-  position: relative;
-  z-index: 999;
+section {
   height: 100%;
+}
 
-  // 위로 떠오르는 애니메이션
-  animation: upAni 1.2s ease-out forwards;
+.projectSection {
+  background-color: var(--color-bk);
+  color: var(--color-wh);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 140px 100px 100px 100px;
 
-  .inner {
+  h1 {
+    font-size: 110px;
+    line-height: 110%;
+    font-weight: 800;
+    letter-spacing: -5px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    span {
+      font-size: 80px;
+      margin-left: 30px;
+    }
+  }
+
+  h2 {
+    line-height: 150%;
+    font-size: 21px;
+    text-align: center;
+    font-weight: 500;
+
+    p {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: 400;
+      span {
+        margin-left: 60px;
+      }
+    }
+  }
+
+  .videoWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 850px;
+    aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
+  }
+}
+
+// ===================
+// detailInfo
+
+.detailInfoWrapper {
+  // width: 100%;
+  // height: 100%;
+  display: flex;
+
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 430px;
+    height: 430px;
+    border-radius: 50%;
+    border: 1px solid var(--color-wh);
+    padding: 30px;
+
+    margin-bottom: 50px;
+
+    &:nth-child(1) {
+      transform: translateX(35px);
+    }
+    &:nth-child(2) {
+      border: 1px dashed var(--color-wh);
+    }
+    &:nth-child(3) {
+      transform: translateX(-35px);
+    }
+
+    p {
+      padding: 0 48px;
+      font-size: 21px;
+      line-height: 220%;
+      text-align: center;
+      font-weight: 400;
+      word-break: break-all;
+      span {
+        font-weight: 700;
+        color: var(--color-point);
+      }
+    }
+  }
+}
+
+// ===================
+// MyContribution
+// ===================
+.myContributionSection {
+  background-color: var(--color-wh);
+  color: var(--color-bk);
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 140px 100px 100px 100px;
+
+  h1 {
+    font-size: 110px;
+    line-height: 110%;
+    font-weight: 800;
+    letter-spacing: -5px;
+
+    span {
+      font-size: 80px;
+      margin-left: 30px;
+    }
+  }
+
+  // =======================
+  // url 링크
+
+  .contributionWrapper {
     width: 100%;
     height: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-}
-
-// li
-.projectDetailBox {
-  padding: 50px 10px;
-  border-top: 1px solid var(--color-bk);
-
-  display: flex;
-  justify-content: space-between;
-}
-// ========================
-// 제일 상단 제목 코드
-// ========================
-
-// ============ 왼쪽 wrapper
-.titleWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 800px;
-
-  .h1ProjectTitle {
-    font-size: 45px;
-    line-height: 140%;
-    font-weight: 600;
-    // width: 600px;
-  }
-}
-
-.h2Info {
-  display: flex;
-  margin-top: 10px;
-
-  .h2InfoTitle {
-    font-style: 16px;
-    width: 95px;
-    font-weight: 500;
-    color: var(--color-gr);
-  }
-}
-
-// ===================
-// ===================
-
-//============ 오른쪽 wrapper
-.infoDetail {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.infoDetail {
-  font-size: 25px;
-  font-weight: 500;
-  line-height: 170%;
-}
-
-.projectInfoBottomWrapper {
-  font-size: 17px;
-  line-height: 150%;
-  padding-top: 60px;
-  padding-right: 60px;
-  p {
-    margin-top: 10px;
-  }
-}
-
-// ========================
-// DetailSkills 파일(스킬)
-// ========================
-
-// 스킬 소제목
-.info {
-  display: flex;
-  align-items: center;
-  font-size: 17px;
-  font-weight: 600;
-  // margin-bottom: 15px;
-  width: 100%;
-  border-bottom: 1px solid var(--color-bk);
-  padding: 15px 0;
-
-  &:nth-child(1) {
-    padding-top: 0;
-  }
-
-  &:nth-last-child(1) {
-    border-bottom: none;
-  }
-
-  .listName {
-    width: 200px;
-  }
-
-  p {
-    margin-left: 15px;
-  }
-
-  .infoDetailText {
     display: flex;
-  }
+    align-items: end;
+    justify-content: space-between;
 
-  &.work {
-    line-height: 160%;
-    .DetailWorkSkill {
-      font-size: 13px;
-      font-weight: 400;
-      margin-top: 10px;
-    }
-    &.info {
-      align-items: start;
-      padding: 50px 0;
-    }
-    &.info:nth-child(1) {
-      padding: 15px 0 50px 0;
-    }
-    .infoDetailText {
-      flex-direction: column;
+    .urlWrapper {
+      color: var(--color-wh);
+      display: flex;
+      .url {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 120px;
+        height: 120px;
+        font-weight: 600;
+        margin-right: 10px;
+        cursor: pointer;
 
-      width: 500px;
-      line-height: 160%;
+        background-image: url("../../assets/images/icons/flower_icon_B.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
 
-      .detailWork {
-        margin-bottom: 5px;
-        margin-top: 50px;
-
-        &:nth-child(1) {
-          margin-top: 0;
+        &:hover {
+          transition: all 0.3s ease;
+          transform: translateY(-10px);
         }
       }
-      .detailWorkSubText {
-        font-weight: 400;
-        margin-top: 10px;
+    }
+
+    // ====================
+    // 내 역할 박스
+    .Box {
+      width: 900px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 27px 0;
+      border-bottom: 1px solid var(--color-bk);
+      cursor: pointer;
+      &:nth-child(1) {
+        border-top: 1.2px solid var(--color-bk);
+      }
+
+      .contributionTitleWrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // 내가 한 역할 타이틀
+        .contributionTitle {
+          font-size: 30px;;
+          height: 60px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+        }
+
+        // 더보기 이미지
+        img {
+          width: 40px;
+          height: 40px;
+          transition: transform 0.3s ease;
+        }
+      }
+
+      // 상세글
+      .contributionText {
+        display: flex;
+        p {
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+
+          font-size: 22px;
+          margin-right: 70px;
+          font-weight: 500;
+        }
+      }
+
+      // 상세글 더보기 클릭 시
+      &.open {
+        .contributionTitleWrapper {
+          .contributionTitle {
+            font-weight: 800;
+            margin-bottom: 10px;
+            // color: var(--color-point);
+          }
+          img {
+            transform: rotate(90deg);
+          }
+        }
+        .contributionText {
+          p {
+            opacity: 1;
+            max-height: 500px;
+            transition: opacity 0.3s ease, max-height 0.3s ease;
+          }
+        }
       }
     }
   }
 }
 
-// ========================
-// 비디오
-// ========================
-.videoWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 1400px;
-  aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
-}
-
-// ========================
-// 이미지
-// ========================
-
-.imgSubWrapper {
-  overflow: hidden;
-  width: 1400px;
-
-  .imgSubInner {
-    display: flex;
-  }
-
-  // 원본 애니메이션
-  .original {
-    display: flex;
-    animation: 40s linear infinite normal none running infiniteAnimation1;
-
-    &.stop {
-      animation-play-state: paused;
-    }
-  }
-
-  // 복제본 애니메이션
-  .clone {
-    display: flex;
-    animation: 40s linear infinite infiniteAnimation2;
-    &.stop {
-      animation-play-state: paused;
-    }
-  }
-}
-
-/* 각 슬라이더 항목 */
-.imgSubItem {
-  height: auto;
-  width: 1000px;
-  display: flex;
-  flex-shrink: 0;
-  padding: 10px;
-  text-align: center;
-  flex-wrap: nowrap;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-// 무한 롤링 애니메이션
-
-@keyframes infiniteAnimation1 {
-  0% {
-    transform: translateX(0%);
-  }
-  50% {
-    transform: translateX(-100%);
-  }
-  50.1% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes infiniteAnimation2 {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
-}
-
-@keyframes upAni {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: 0;
-  }
+// 스킬 부분 section
+.mySkillSection {
+  width: 100%;
+  height: 200px;
+  background-color: var(--color-point);
+  color: var(--color-wh);
+  padding: 0 100px;
 }

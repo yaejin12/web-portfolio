@@ -1,17 +1,27 @@
-import React, { useState } from "react";
-import SkillProgram from "./SkillProgram";
-import DetailTemplate from "../../../components/common/detailTemplate/DetailTemplate";
+import React from "react";
+import SkillBox from "../../../components/common/skill/SkillBox";
+import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 
-function DetailSkills({ project }) {
-  const skills = project.skills;
+function DetailSkills({ styles }) {
+  const location = useLocation();
+
+  const meetingSkills = useSelector((state) => {
+    if (location.pathname === "/1") {
+      return state.projectSkills.meetingSkills;
+    } else if (location.pathname === "/2") {
+      return state.projectSkills.healingPageSkills;
+    } else {
+      return null;
+    }
+  });
+
 
 
   return (
-    <DetailTemplate title={"skills"}>
-      {skills.map((skill, i) => {
-        return <SkillProgram key={i} skillList={skill} />;
-      })}
-    </DetailTemplate>
+    <section className={styles.mySkillSection}>
+      <SkillBox skills={meetingSkills} />
+    </section>
   );
 }
 

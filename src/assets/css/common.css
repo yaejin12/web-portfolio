@@ -13,7 +13,8 @@ body {
 
 .inner {
   width: 100%;
-  max-width: 1400px;
+  padding: 0 60px 200px 0;
+
   margin: 0 auto;
 }
 
@@ -24,13 +25,34 @@ body {
 
 /* 루트 */
 :root {
-  --color-bk: #161616;
+  --color-bk: #171717;
   --color-gr: #7a7a7a;
-  --color-point: #8ec5fc;
-  --color-wh: #f7fbff;
+  --color-point: #f56e50;
+  --color-wh: #f4f0ed;
   --color-error: #ff0000;
 }
 
 *::-webkit-scrollbar {
   display: none;
+}
+
+@media screen and (max-width: 1550px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html,
+  body {
+    font-size: 9px;
+  }
 }
