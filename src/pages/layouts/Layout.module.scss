@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  height: 130px;
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,18 +35,17 @@ header {
     .menuLine {
       position: absolute;
       right: 0;
-      width: 70px;
-      height: 4px;
+      width: 53px;
+      height: 2px;
       border-radius: 30px;
       background-color: var(--color-bk);
 
       transition: 0.3s;
       &:nth-child(1) {
-        // margin-bottom: 15px;
-        top: 38%;
+        top: 35%;
       }
       &:nth-child(2) {
-        bottom: 38%;
+        bottom: 35%;
       }
     }
 
@@ -65,7 +64,10 @@ header {
     }
   }
 }
-// munu
+
+// =======================
+// 메뉴화면
+// =======================
 .menuClickWrapper {
   &.open {
     transform: translateX(0);
@@ -93,8 +95,6 @@ header {
 
     flex-direction: column;
     backdrop-filter: blur(10px);
-
-    // align-items: center;
     p {
       font-size: 87px;
       font-weight: 700;
@@ -140,21 +140,38 @@ header {
   }
 }
 
+// ==================
 // footer
-
+// ==================
 footer {
   border-top: 1px solid var(--color-wh);
+  background-color: var(--color-bk);
+  color: var(--color-wh);
   height: 120px;
   width: 100%;
-  background-color: var(--color-bk);
-  // background-color: var(--color-point);
 
   .footerWrapper {
     display: flex;
     justify-content: space-between;
-    // height: 100%;
     width: 100%;
     padding: 25px 100px 0 100px;
+
+    .footerInfo {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      font-weight: 400;
+
+      p {
+        margin: 5px 200px 5px 0;
+
+        span {
+          // width: 100%;
+          font-weight: 800;
+          margin-right: 10px;
+        }
+      }
+    }
 
     img {
       width: 45px;
@@ -164,17 +181,6 @@ footer {
       display: flex;
       align-items: start;
       opacity: 0.9;
-    }
-
-    p {
-      span {
-        font-weight: 800;
-        margin-right: 10px;
-      }
-      color: var(--color-wh);
-      display: flex;
-      align-items: center;
-      font-weight: 400;
     }
   }
 }
@@ -186,5 +192,252 @@ footer {
   }
   to {
     transform: translateY(-50%) rotate(360deg); /* 끝날 때 360도 회전 */
+  }
+}
+
+// ===============
+// 반응형
+// ===============
+
+@media screen and (max-width: 1550px) {
+  // =========================
+  // 반응형 1550px header
+
+  .headerWrapper {
+    // inner
+    padding: 0 70px;
+  }
+
+  // =======================
+  // 반응형 1550px 메뉴화면
+
+  .menuClickWrapper {
+    .gnb {
+      padding-bottom: 0;
+
+      p {
+        font-size: 60px;
+        margin-bottom: 30px;
+
+        // 메뉴 hover 효과
+        &:hover {
+          &::after {
+            width: 40px;
+            height: 40px;
+            margin-left: 25px;
+          }
+          &::before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            margin-left: 25px;
+            left: -80px;
+          }
+        }
+      }
+    }
+  }
+
+  // =======================
+  // 반응형 1550px footer
+
+  footer {
+    .footerWrapper {
+      padding: 25px 70px 0 70px;
+
+      .footerInfo {
+        p {
+          // margin: 5px 200px 5px 0;
+
+          span {
+            // margin-right: 10px;
+          }
+        }
+      }
+
+      img {
+        // width: 45px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  // =========================
+  // 반응형 1080px header
+
+  .headerWrapper {
+    // inner
+    padding: 0 50px;
+  }
+
+  // =======================
+  // 반응형 1080px 메뉴화면
+
+  .menuClickWrapper {
+    .gnb {
+      padding-bottom: 0;
+
+      p {
+        font-size: 50px;
+        margin-bottom: 30px;
+
+        // 메뉴 hover 효과
+        &:hover {
+          &::after {
+            width: 40px;
+            height: 40px;
+            margin-left: 25px;
+          }
+          &::before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            margin-left: 25px;
+            left: -80px;
+          }
+        }
+      }
+    }
+  }
+
+  // ==================
+  // 반응형 1080px footer
+
+  footer {
+    .footerWrapper {
+      padding: 25px 50px 0 50px;
+
+      .footerInfo {
+        p {
+          // margin: 5px 200px 5px 0;
+
+          span {
+            // margin-right: 10px;
+          }
+        }
+      }
+
+      img {
+        // width: 45px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  // =========================
+  // 반응형 768px header
+
+  header {
+    height: 50px;
+  }
+  .headerWrapper {
+    // inner
+    padding: 0 30px;
+
+    // 메뉴
+    .menuWrapper {
+      width: 25px;
+
+      //햄버거
+      .menuLine {
+        width: 25px;
+        height: 2px;
+
+        &:nth-child(1) {
+          top: 37%;
+        }
+        &:nth-child(2) {
+          bottom: 37%;
+        }
+      }
+    }
+  }
+
+  // ==================
+  // 반응형 768px footer
+
+  footer {
+    .footerWrapper {
+      padding: 25px 30px 0 30px;
+
+      .footerInfo {
+        flex-direction: column;
+        align-items: start;
+        p {
+          margin: 4px 10px 4px 0;
+
+          span {
+            margin-right: 7px;
+          }
+        }
+      }
+
+      img {
+        width: 35px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  // =========================
+  // 반응형 500px header
+  // =========================
+
+  .headerWrapper {
+    // inner
+    padding: 0 15px;
+  }
+
+  // =======================
+  // 반응형 500px 메뉴화면
+
+  .menuClickWrapper {
+    .gnb {
+      p {
+        font-size: 26px;
+        margin-bottom: 20px;
+
+        // 메뉴 hover 효과
+        &:hover {
+          &::after {
+            width: 17px;
+            height: 17px;
+            margin-left: 8px;
+          }
+          &::before {
+            content: "";
+            width: 17px;
+            height: 17px;
+            margin-left: 8px;
+            left: -32px;
+          }
+        }
+      }
+    }
+  }
+  // ==================
+  // 반응형 500px footer
+
+  footer {
+    .footerWrapper {
+      padding: 25px 15px 0 15px;
+
+      .footerInfo {
+        p {
+          margin: 3px 0 3px 0;
+
+          span {
+            margin-right: 5px;
+          }
+        }
+      }
+
+      img {
+        width: 30px;
+      }
+    }
   }
 }

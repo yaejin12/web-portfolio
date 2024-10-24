@@ -37,19 +37,22 @@ body {
 }
 
 @media screen and (max-width: 1550px) {
-  html {
-    font-size: 11px;
+  html,
+  body {
+    font-size: 15px;
   }
 }
 
-@media screen and (max-width: 1024px) {
-  html {
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html,
+  body {
     font-size: 9px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  html {
-    font-size: 1px;
   }
 }

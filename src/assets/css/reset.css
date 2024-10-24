@@ -78,7 +78,7 @@ body {
   /* font-family: "Noto Sans KR", sans-serif; */
   font-family: "SUITE", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  /* font-size: 16px; */
   color: var(--color-bk);
   background-color: var(--color-wh);
 }

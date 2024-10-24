@@ -9,7 +9,6 @@
   height: 100%;
   background-color: var(--color-bk);
   color: var(--color-wh);
-  // padding: 100px;
 
   .aboutMeWrapper {
     height: 100vh;
@@ -20,7 +19,7 @@
     //About Me 타이틀
 
     .h1Title {
-      font-size:80px;
+      font-size: 80px;
       font-weight: 600;
       line-height: 150%;
 
@@ -54,14 +53,110 @@
 }
 
 // ========================
-// ========================
 // my skill
-// ========================
-// ========================
+
 .mySkillSection {
   width: 100%;
   height: 100vh;
   background-color: var(--color-bk);
   color: var(--color-wh);
   padding: 0 100px;
+}
+
+// ========================
+// 반응형
+// ========================
+@media screen and (max-width: 1550px) {
+  .aboutMeSection {
+    .aboutMeWrapper {
+      // ========================
+      //  반응형 1550px About Me 타이틀
+      .h1Title {
+        font-size: 50px;
+      }
+
+      // ========================
+      &:nth-child(1) .h1Title p {
+        font-size: 90px;
+      }
+    }
+  }
+
+  // ========================
+  // 반응형 1550px my skill
+  .mySkillSection {
+    padding: 0 70px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .aboutMeSection {
+    .aboutMeWrapper {
+      // ========================
+      //  반응형 1080px About Me 타이틀
+      .h1Title {
+        font-size: 35px;
+      }
+
+      // ========================
+      &:nth-child(1) .h1Title p {
+        font-size: 65px;
+      }
+    }
+  }
+
+  // ========================
+  // 반응형 1080px my skill
+
+  .mySkillSection {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMeSection {
+    .aboutMeWrapper {
+      // ========================
+      //  반응형 768px About Me 타이틀
+      .h1Title {
+        font-size: 25px;
+      }
+
+      // ========================
+      &:nth-child(1) .h1Title p {
+        font-size: 55px;
+      }
+    }
+  }
+
+  // ========================
+  // 반응형 768px my skill
+
+  .mySkillSection {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .aboutMeSection {
+    .aboutMeWrapper {
+      // ========================
+      //  반응형 500px About Me 타이틀
+      .h1Title {
+        font-size: 18px;
+      }
+
+      // ========================
+      &:nth-child(1) .h1Title p {
+        font-size: 40px;
+      }
+    }
+  }
+
+  // ========================
+  // 반응형 500px my skill
+
+  .mySkillSection {
+    padding: 0 15px;
+  }
 }

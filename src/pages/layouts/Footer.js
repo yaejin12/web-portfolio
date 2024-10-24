@@ -5,12 +5,14 @@ function Footer() {
   return (
     <footer>
       <div className={styles.footerWrapper}>
-        <p>
-          <span>Phone.</span>010. 5667. 8759
-        </p>
-        <p>
-          <span>Email.</span>pos03167@naver.com
-        </p>
+        <div className={styles.footerInfo}>
+          <p>
+            <span>Phone.</span>010. 5667. 8759
+          </p>
+          <p>
+            <span>Email.</span>pos03167@naver.com
+          </p>
+        </div>
         <img src={logoGray} />
       </div>
     </footer>

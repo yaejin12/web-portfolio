@@ -5,32 +5,35 @@ import charaterLine from "../../../assets/images/logo/logo_line.svg";
 import gitArrow from "../../../assets/images/icons/arrow_git.svg";
 
 function MainBanner({ styles }) {
+  // 바뀌는 시간 상태관리
   const [isFullImg, setIsFullImg] = useState(false);
 
+  // 바뀌는 시간 함수
   const changeImg = () => {
     setTimeout(() => {
       setIsFullImg(!isFullImg);
     }, 2500);
   };
 
+  // 바뀌는 시간 상태가 변경될때 마다 실행
   useEffect(() => {
     changeImg();
   }, [isFullImg]);
 
   return (
     <section>
-      <div className={styles.mainBannerSection}>
+      <div className={styles.mainBannerInner}>
         {/* 텍스트 부분 */}
-        <div className={styles.titleWrapper}>
-          <div>
-            <div className={styles.text}>
-              <p>Lee</p>
-              <p>yae</p>
-              <p>jin</p>
-            </div>
-            <p className={styles.text}>Frontend</p>
-            <p className={styles.text}>Portfolio</p>
+        <div className={styles.mainBannerWrapper}>
+          {/* 첫줄 */}
+          <div className={styles.text}>
+            <p>Lee</p>
+            <p>yae</p>
+            <p>jin</p>
           </div>
+          <div className={styles.text}>Frontend</div>
+          <div className={styles.text}>Portfolio</div>
+
           {/* 깃 바로가기 */}
           <div className={styles.git}>
             <a href="https://github.com/yaejin12">
@@ -40,7 +43,7 @@ function MainBanner({ styles }) {
           </div>
         </div>
         {/* 캐릭터 */}
-        <div className={styles.charaterWrapper}>
+        <div className={`${styles.charaterImages} ${styles.isView}`}>
           <img src={charaterLine} />
           <img src={charaterFull} className={isFullImg ? styles.isView : ""} />
         </div>
