@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-function DetailHeader() {
+function DetailHeader({styles}) {
   const location = useLocation();
 
   const [content, setContent] = useState({});
@@ -50,7 +50,7 @@ function DetailHeader() {
   }, [location]);
 
   return (
-    <div>
+    <div className={styles.projectTitle}>
       <h1>{content.h1}</h1>
       <h2>
         {content.h2}

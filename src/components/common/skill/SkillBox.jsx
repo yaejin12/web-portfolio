@@ -1,22 +1,23 @@
-import React from "react";
+import React, { forwardRef, useEffect, useRef } from "react";
 import styles from "./SkillBox.module.scss";
 
 // skills 더미 넘기기
-function SkillBox({ skills, title }) {
+const SkillBox = forwardRef(({ skills, title }, ref) => {
   return (
     <div className={styles.mySkillWrapper}>
       {title && <div className={styles.title}>{title}</div>}
-      <div className={styles.skill}>
+      {/* 각각의 skill */}
+      <ul className={styles.skill} ref={ref}>
         {skills?.map((skillText, i) => {
           return (
-            <div key={i} className={styles.skillBox}>
+            <li key={i} className={styles.skillBox}>
               {skillText}
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </div>
   );
-}
+});
 
 export default SkillBox;

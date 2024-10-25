@@ -2,76 +2,78 @@ section {
   height: 100%;
 }
 
+// 프로젝트 탑부분
 .projectSection {
   background-color: var(--color-bk);
   color: var(--color-wh);
-  width: 100%;
   height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 140px 100px 100px 100px;
+  justify-content: center;
+  padding: 0 100px;
 
-  h1 {
-    font-size: 110px;
-    line-height: 110%;
-    font-weight: 800;
-    letter-spacing: -5px;
-    text-align: center;
-    margin-bottom: 20px;
+  .projectWrapper {
+    .projectTitle {
+      padding-bottom: 100px;
+      // 타이틀 부분 /프로젝트 이름/
+      h1 {
+        font-size: 100px;
+        line-height: 110%;
+        font-weight: 800;
+        letter-spacing: -5px;
+        text-align: center;
+        margin-bottom: 20px;
 
-    span {
-      font-size: 80px;
-      margin-left: 30px;
-    }
-  }
-
-  h2 {
-    line-height: 150%;
-    font-size: 21px;
-    text-align: center;
-    font-weight: 500;
-
-    p {
-      margin-top: 15px;
-      font-size: 18px;
-      font-weight: 400;
-      span {
-        margin-left: 60px;
+        span {
+          font-size: 80px;
+          margin-left: 30px;
+        }
+      }
+      // 프로젝트 짧은 소개
+      h2 {
+        font-size: 21px;
+        line-height: 150%;
+        font-weight: 500;
+        text-align: center;
+        // 날짜 & 조이름
+        p {
+          margin-top: 15px;
+          font-size: 18px;
+          font-weight: 400;
+          span {
+            margin-left: 60px;
+          }
+        }
       }
     }
-  }
 
-  .videoWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 850px;
-    aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
+    // 비디오 영상
+    .videoWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 850px;
+      aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
+    }
   }
 }
 
 // ===================
 // detailInfo
-
 .detailInfoWrapper {
-  // width: 100%;
-  // height: 100%;
   display: flex;
+  flex-wrap: wrap;
 
   .circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 430px;
     height: 430px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid var(--color-wh);
-    padding: 30px;
-
-    margin-bottom: 50px;
 
     &:nth-child(1) {
       transform: translateX(35px);
@@ -82,14 +84,15 @@ section {
     &:nth-child(3) {
       transform: translateX(-35px);
     }
-
+    // 원모양 text
     p {
       padding: 0 48px;
-      font-size: 21px;
-      line-height: 220%;
-      text-align: center;
+      font-size: 18px;
+      line-height: 200%;
       font-weight: 400;
+      text-align: center;
       word-break: break-all;
+
       span {
         font-weight: 700;
         color: var(--color-point);
@@ -104,132 +107,137 @@ section {
 .myContributionSection {
   background-color: var(--color-wh);
   color: var(--color-bk);
-
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 
-  padding: 140px 100px 100px 100px;
+  padding: 0 100px;
 
-  h1 {
-    font-size: 110px;
-    line-height: 110%;
-    font-weight: 800;
-    letter-spacing: -5px;
-
-    span {
-      font-size: 80px;
-      margin-left: 30px;
-    }
-  }
-
-  // =======================
-  // url 링크
-
-  .contributionWrapper {
+  .myContributionInner {
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
+    height: auto;
+    padding: 150px 0;
 
-    .urlWrapper {
-      color: var(--color-wh);
-      display: flex;
-      .url {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        width: 120px;
-        height: 120px;
-        font-weight: 600;
-        margin-right: 10px;
-        cursor: pointer;
-
-        background-image: url("../../assets/images/icons/flower_icon_B.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-
-        &:hover {
-          transition: all 0.3s ease;
-          transform: translateY(-10px);
-        }
-      }
+    // My Contributions 대제목 부분
+    h1 {
+      font-size: 110px;
+      line-height: 110%;
+      font-weight: 800;
+      letter-spacing: -5px;
+      margin-bottom: 150px;
     }
 
-    // ====================
-    // 내 역할 박스
-    .Box {
-      width: 900px;
+    // =======================
+    // 하단 wrapper
+
+    .contributionWrapper {
+      width: 100%;
+      height: 500px;
+      // height: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 27px 0;
-      border-bottom: 1px solid var(--color-bk);
-      cursor: pointer;
-      &:nth-child(1) {
-        border-top: 1.2px solid var(--color-bk);
-      }
+      align-items: end;
+      justify-content: space-between;
 
-      .contributionTitleWrapper {
-        width: 100%;
-        height: 100%;
+      // =======================
+      // url 링크
+      .urlWrapper {
+        color: var(--color-wh);
         display: flex;
-        justify-content: space-between;
-        align-items: center;
 
-        // 내가 한 역할 타이틀
-        .contributionTitle {
-          font-size: 30px;;
-          height: 60px;
-          width: 100%;
+        .url {
           display: flex;
           align-items: center;
-        }
+          justify-content: center;
+          text-align: center;
+          width: 120px;
+          height: 120px;
+          font-weight: 600;
+          margin-right: 10px;
+          cursor: pointer;
 
-        // 더보기 이미지
-        img {
-          width: 40px;
-          height: 40px;
-          transition: transform 0.3s ease;
+          background-image: url("../../assets/images/icons/flower_icon_B.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+
+          &:hover {
+            transition: all 0.3s ease;
+            transform: translateY(-10px);
+          }
         }
       }
 
-      // 상세글
-      .contributionText {
+      // ====================
+      // 내 역할 박스
+      .Box {
+        width: 900px;
+        // height: 100px;
         display: flex;
-        p {
-          opacity: 0;
-          max-height: 0;
-          overflow: hidden;
-
-          font-size: 22px;
-          margin-right: 70px;
-          font-weight: 500;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        // padding: 27px 0;
+        border-bottom: 1px solid var(--color-bk);
+        cursor: pointer;
+        &:nth-child(1) {
+          border-top: 1.2px solid var(--color-bk);
         }
-      }
 
-      // 상세글 더보기 클릭 시
-      &.open {
         .contributionTitleWrapper {
+          width: 100%;
+          height: 100px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          // 내가 한 역할 타이틀
           .contributionTitle {
-            font-weight: 800;
-            margin-bottom: 10px;
-            // color: var(--color-point);
+            font-size: 30px;
+            width: 100%;
+            display: flex;
+            align-items: center;
           }
+
+          // 더보기 이미지
           img {
-            transform: rotate(90deg);
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
           }
         }
+
+        // 상세글
         .contributionText {
+          display: flex;
+          max-height: 0;
+          opacity: 0;
+
           p {
+            font-size: 21px;
+            margin-right: 70px;
+            font-weight: 500;
+          }
+        }
+
+        // 상세글 더보기 클릭 시
+        &.open {
+          .contributionTitleWrapper {
+            .contributionTitle {
+              font-weight: 800;
+              margin-bottom: 10px;
+              // color: var(--color-point);
+            }
+            img {
+              transform: rotate(90deg);
+            }
+          }
+          .contributionText {
+            min-height: 55px;
             opacity: 1;
-            max-height: 500px;
-            transition: opacity 0.3s ease, max-height 0.3s ease;
+            transition: opacity 0.3s ease-out, max-height 0.3s ease;
+            transition-delay: 0.2s;
           }
         }
       }

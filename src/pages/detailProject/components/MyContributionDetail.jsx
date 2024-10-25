@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import iconOpen from "../../../assets/images/icons/arrow_url.svg";
 
 function MyContributionDetail({ styles, project }) {
+  // 박스 클릭했는지 상태관리
   const [isBoxClick, setIsBoxClick] = useState(
     Array(project.length).fill(false)
   );
+
+  // 어떤 박스 클릭했는지 확인하는 함수
   const BoxClickHandler = (id) => {
     setIsBoxClick((prv) => {
       return prv.map((isClick, index) => (index === id ? !isClick : false));
