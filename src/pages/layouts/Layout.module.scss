@@ -11,10 +11,10 @@ header {
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   // inner
-  padding: 0 100px;
+  padding: 0 100px 0 100px;
 
   // 로고
   .logo {
@@ -35,17 +35,17 @@ header {
     .menuLine {
       position: absolute;
       right: 0;
-      width: 53px;
+      width: 40px;
       height: 2px;
       border-radius: 30px;
       background-color: var(--color-bk);
 
       transition: 0.3s;
       &:nth-child(1) {
-        top: 35%;
+        top: calc(100% - 25px);
       }
       &:nth-child(2) {
-        bottom: 35%;
+        bottom: 50%;
       }
     }
 
@@ -95,8 +95,9 @@ header {
 
     flex-direction: column;
     backdrop-filter: blur(10px);
+
     p {
-      font-size: 87px;
+      font-size: 55px;
       font-weight: 700;
       margin-bottom: 50px;
       color: var(--color-wh);
@@ -107,8 +108,8 @@ header {
         &::after {
           content: "";
           position: absolute;
-          width: 50px;
-          height: 50px;
+          width: 35px;
+          height: 35px;
           margin-left: 30px;
           background-size: contain;
           background-position: center;
@@ -122,8 +123,8 @@ header {
         &::before {
           content: "";
           position: absolute;
-          width: 50px;
-          height: 50px;
+          width: 35px;
+          height: 35px;
           margin-right: 30px;
           background-size: contain;
           background-position: center;
@@ -131,7 +132,7 @@ header {
           background-image: url(../../assets//images/icons/flower_icon.svg);
           top: 50%;
           // transform: translateY(50%);
-          left: -80px;
+          left: -65px;
           z-index: 9999;
           animation: rotate 8s linear infinite;
         }
@@ -147,14 +148,13 @@ footer {
   border-top: 1px solid var(--color-wh);
   background-color: var(--color-bk);
   color: var(--color-wh);
-  height: 120px;
   width: 100%;
 
   .footerWrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 25px 100px 0 100px;
+    padding: 25px 100px 25px 100px;
 
     .footerInfo {
       display: flex;
@@ -164,6 +164,9 @@ footer {
 
       p {
         margin: 5px 200px 5px 0;
+        &:nth-child(2) {
+          margin-right: 0;
+        }
 
         span {
           // width: 100%;
@@ -202,10 +205,31 @@ footer {
 @media screen and (max-width: 1550px) {
   // =========================
   // 반응형 1550px header
+  header {
+    height: 80px;
+  }
 
   .headerWrapper {
     // inner
-    padding: 0 70px;
+    padding: 0 50px 0 50px;
+
+    // 메뉴
+    .menuWrapper {
+      //햄버거
+      .menuLine {
+        height: 2px;
+        border-radius: 30px;
+        background-color: var(--color-bk);
+
+        transition: 0.3s;
+        &:nth-child(1) {
+          top: calc(100% - 25px);
+        }
+        &:nth-child(2) {
+          bottom: 50%;
+        }
+      }
+    }
   }
 
   // =======================
@@ -216,22 +240,22 @@ footer {
       padding-bottom: 0;
 
       p {
-        font-size: 60px;
-        margin-bottom: 30px;
+        font-size: 45px;
+        margin-bottom: 35px;
 
         // 메뉴 hover 효과
         &:hover {
           &::after {
-            width: 40px;
-            height: 40px;
+            width: 25px;
+            height: 25px;
             margin-left: 25px;
           }
           &::before {
             content: "";
-            width: 40px;
-            height: 40px;
+            width: 25px;
+            height: 25px;
             margin-left: 25px;
-            left: -80px;
+            left: -70px;
           }
         }
       }
@@ -243,9 +267,10 @@ footer {
 
   footer {
     .footerWrapper {
-      padding: 25px 70px 0 70px;
+      padding: 25px 50px 25px 50px;
 
       .footerInfo {
+        font-size: 14px;
         p {
           // margin: 5px 200px 5px 0;
 
@@ -256,7 +281,7 @@ footer {
       }
 
       img {
-        // width: 45px;
+        width: 40px;
       }
     }
   }
@@ -268,7 +293,7 @@ footer {
 
   .headerWrapper {
     // inner
-    padding: 0 50px;
+    padding: 0 50px 0 50px;
   }
 
   // =======================
@@ -279,22 +304,22 @@ footer {
       padding-bottom: 0;
 
       p {
-        font-size: 50px;
+        font-size: 40px;
         margin-bottom: 30px;
 
         // 메뉴 hover 효과
         &:hover {
           &::after {
-            width: 40px;
-            height: 40px;
-            margin-left: 25px;
+            width: 22px;
+            height: 22px;
+            margin-left: 20px;
           }
           &::before {
             content: "";
-            width: 40px;
-            height: 40px;
-            margin-left: 25px;
-            left: -80px;
+            width: 22px;
+            height: 22px;
+            margin-left: 20px;
+            left: -57px;
           }
         }
       }
@@ -306,11 +331,11 @@ footer {
 
   footer {
     .footerWrapper {
-      padding: 25px 50px 0 50px;
+      padding: 25px 50px 25px 50px;
 
       .footerInfo {
         p {
-          // margin: 5px 200px 5px 0;
+          font-size: 12px;
 
           span {
             // margin-right: 10px;
@@ -319,7 +344,7 @@ footer {
       }
 
       img {
-        // width: 45px;
+        width: 30px;
       }
     }
   }
@@ -334,7 +359,7 @@ footer {
   }
   .headerWrapper {
     // inner
-    padding: 0 30px;
+    padding: 0 30px 0 30px;
 
     // 메뉴
     .menuWrapper {
@@ -346,10 +371,37 @@ footer {
         height: 2px;
 
         &:nth-child(1) {
-          top: 37%;
+          top: calc(100% - 15px);
         }
         &:nth-child(2) {
-          bottom: 37%;
+          bottom: 50%;
+        }
+      }
+    }
+  }
+  // =======================
+  // 반응형 768px 메뉴화면
+
+  .menuClickWrapper {
+    .gnb {
+      p {
+        font-size: 30px;
+        margin-bottom: 30px;
+
+        // 메뉴 hover 효과
+        &:hover {
+          &::after {
+            width: 18px;
+            height: 18px;
+            margin-left: 18px;
+          }
+          &::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            margin-left: 18px;
+            left: -55px;
+          }
         }
       }
     }
@@ -360,13 +412,12 @@ footer {
 
   footer {
     .footerWrapper {
-      padding: 25px 30px 0 30px;
-
       .footerInfo {
         flex-direction: column;
         align-items: start;
         p {
           margin: 4px 10px 4px 0;
+          font-size: 10px;
 
           span {
             margin-right: 7px;
@@ -388,29 +439,39 @@ footer {
 
   .headerWrapper {
     // inner
-    padding: 0 15px;
-  }
+    padding: 0 15px 0 15px;
 
+    // 메뉴
+    .menuWrapper {
+      width: 25px;
+
+      //햄버거
+      .menuLine {
+        width: 25px;
+        height: 2px;
+      }
+    }
+  }
   // =======================
   // 반응형 500px 메뉴화면
 
   .menuClickWrapper {
     .gnb {
       p {
-        font-size: 26px;
+        font-size: 25px;
         margin-bottom: 20px;
 
         // 메뉴 hover 효과
         &:hover {
           &::after {
-            width: 17px;
-            height: 17px;
+            width: 15px;
+            height: 15px;
             margin-left: 8px;
           }
           &::before {
             content: "";
-            width: 17px;
-            height: 17px;
+            width: 15px;
+            height: 15px;
             margin-left: 8px;
             left: -32px;
           }
@@ -422,13 +483,14 @@ footer {
   // 반응형 500px footer
 
   footer {
+    height: 100%;
     .footerWrapper {
-      padding: 25px 15px 0 15px;
+      padding: 15px;
 
       .footerInfo {
         p {
           margin: 3px 0 3px 0;
-
+          font-size: 10px;
           span {
             margin-right: 5px;
           }
@@ -437,6 +499,78 @@ footer {
 
       img {
         width: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  // =========================
+  // 반응형 320px header
+  // =========================
+
+  .headerWrapper {
+    // inner
+    padding: 0 8px 0 8px;
+
+    // 메뉴
+    .menuWrapper {
+      width: 25px;
+
+      //햄버거
+      .menuLine {
+        width: 25px;
+        height: 2px;
+      }
+    }
+  }
+  // =======================
+  // 반응형 320px 메뉴화면
+
+  .menuClickWrapper {
+    .gnb {
+      p {
+        font-size: 20px;
+        margin-bottom: 15px;
+
+        // 메뉴 hover 효과
+        &:hover {
+          &::after {
+            width: 13px;
+            height: 13px;
+            margin-left: 8px;
+          }
+          &::before {
+            content: "";
+            width: 13px;
+            height: 13px;
+            margin-left: 8px;
+            left: -27px;
+          }
+        }
+      }
+    }
+  }
+  // ==================
+  // 반응형 320px footer
+
+  footer {
+    // height: 70px;
+    .footerWrapper {
+      padding: 10px 8px 10px 8px;
+
+      .footerInfo {
+        p {
+          margin: 2px 0 2px 0;
+          font-size: 6px;
+          span {
+            margin-right: 3px;
+          }
+        }
+      }
+
+      img {
+        width: 23px;
       }
     }
   }

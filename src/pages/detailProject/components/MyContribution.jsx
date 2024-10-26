@@ -16,6 +16,8 @@ function MyContribution({ styles }) {
   useEffect(() => {
     dispatch(toggleBlackRef(!inView));
   }, [inView, dispatch]);
+
+  
   //  ================
   const location = useLocation();
 
@@ -30,6 +32,7 @@ function MyContribution({ styles }) {
     }
   });
 
+  // 프로젝트 Git URL 불러오기
   const projectUrl = useSelector((state) => {
     if (location.pathname === "/1") {
       return state.myContribution.meetingUrl;
@@ -40,6 +43,7 @@ function MyContribution({ styles }) {
     }
   });
 
+  // URL 이름 리턴
   const urlName = (url) => {
     if (url.includes("github")) {
       return (
@@ -66,25 +70,27 @@ function MyContribution({ styles }) {
     <>
       <section>
         <div className={styles.myContributionSection} ref={ref}>
-          <h1>My Contributions</h1>
-          <div className={styles.contributionWrapper}>
-            {/* 링크 연결 */}
-            <div className={styles.urlWrapper}>
-              {projectUrl &&
-                projectUrl.map((url, index) => {
-                  return url.url.map((urlDetail, i) => {
-                    return (
-                      <a href={urlDetail}>
-                        <div key={i} className={styles.url}>
-                          {urlName(urlDetail)}
-                        </div>
-                      </a>
-                    );
-                  });
-                })}
+          <div className={styles.myContributionInner}>
+            <h1>My Contributions</h1>
+            {/* 하단 wrapper */}
+            <div className={styles.contributionWrapper}>
+              {/* 링크 연결 */}
+              <div className={styles.urlWrapper}>
+                {projectUrl &&
+                  projectUrl.map((url, index) => {
+                    return url.url.map((urlDetail, i) => {
+                      return (
+                        <a href={urlDetail}>
+                          <div key={i} className={styles.url}>
+                            {urlName(urlDetail)}
+                          </div>
+                        </a>
+                      );
+                    });
+                  })}
+              </div>
+              <MyContributionDetail styles={styles} project={project} />
             </div>
-
-            <MyContributionDetail styles={styles} project={project} />
           </div>
         </div>
       </section>

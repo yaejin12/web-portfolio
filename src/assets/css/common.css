@@ -5,6 +5,7 @@ body {
   font-size: 16px;
   width: 100%;
   height: auto;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -28,7 +29,7 @@ body {
   --color-bk: #171717;
   --color-gr: #7a7a7a;
   --color-point: #f56e50;
-  --color-wh: #f4f0ed;
+  --color-wh: #f4f0ec;
   --color-error: #ff0000;
 }
 

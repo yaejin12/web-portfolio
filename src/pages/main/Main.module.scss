@@ -18,7 +18,7 @@
   letter-spacing: -4px;
 
   .text {
-    font-size: clamp(57px, 11.46vw, 220px);
+    font-size: clamp(57px, 10.9vw, 220px);
     line-height: 110%;
     font-weight: 700;
 
@@ -55,7 +55,7 @@
     // height: 100%;
     align-items: end;
     font-size: 27px;
-    margin: 70px 0 0 0;
+    margin: 100px 0 0 0;
     font-weight: 800;
 
     // 아이콘 화살표 이미지
@@ -117,7 +117,7 @@
 //==============================
 @media screen and (max-width: 1550px) {
   .mainBannerInner {
-    padding: 70px 0 70px 70px;
+    padding: 50px 0 50px 50px;
   }
 
   // Main title 부분
@@ -181,4 +181,7 @@
 }
 
 @media screen and (max-width: 500px) {
+}
+
+@media screen and (max-width: 320px) {
 }
