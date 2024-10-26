@@ -32,7 +32,10 @@ function MyContributionDetail({ styles, project }) {
                 <img src={iconOpen} />
               </div>
               <div className={styles.contributionText}>
-                {text && text.text.map((detailText) => <p>{detailText}</p>)}
+                {text &&
+                  text.text.map((detailText, index) => (
+                    <p key={index}>{detailText}</p>
+                  ))}
               </div>
             </div>
           );

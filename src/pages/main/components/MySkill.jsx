@@ -25,6 +25,7 @@ function MySkill({ styles }) {
       },
     });
   });
+  
   const mySkills = useSelector((state) => state.projectSkills.mySkills);
   return (
     <section className={styles.mySkillSection} ref={skillSectionRef}>

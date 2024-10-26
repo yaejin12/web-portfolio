@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import SkillBox from "../../../components/common/skill/SkillBox";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 function DetailSkills({ styles }) {
   const location = useLocation();
+  const skillSectionRef = useRef();
+  const skillUlRef = useRef();
 
   const meetingSkills = useSelector((state) => {
     if (location.pathname === "/1") {
@@ -16,11 +21,27 @@ function DetailSkills({ styles }) {
     }
   });
 
+  //  // kill 애니메이션
 
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    gsap.to(skillUlRef.current, {
+      xPercent: -170,
+      ease: "none",
+      scrollTrigger: {
+        trigger: skillSectionRef.current,
+        pin: false,
+        scrub: 1,
+        start: "top center",
+        end: "10%",
+      },
+    });
+  });
 
   return (
-    <section className={styles.mySkillSection}>
-      <SkillBox skills={meetingSkills} />
+    <section className={styles.mySkillSection} ref={skillSectionRef}>
+      <SkillBox skills={meetingSkills} ref={skillUlRef} />
     </section>
   );
 }

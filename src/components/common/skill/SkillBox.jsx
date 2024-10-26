@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useRef } from "react";
+import React, { forwardRef } from "react";
 import styles from "./SkillBox.module.scss";
 
 // skills 더미 넘기기
