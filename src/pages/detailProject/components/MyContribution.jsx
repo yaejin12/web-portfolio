@@ -1,23 +1,11 @@
 import React, { useEffect } from "react";
 
-import { useInView } from "react-intersection-observer";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleBlackRef } from "../../../store/Toggle-slice";
+import { useSelector } from "react-redux";
 import MyContributionDetail from "./MyContributionDetail";
 import { useLocation } from "react-router-dom";
+import { v4 as uuidV4 } from "uuid";
 
 function MyContribution({ styles }) {
-  // ================
-  const [ref, inView] = useInView({
-    threshold: 0.01,
-  });
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(toggleBlackRef(!inView));
-  }, [inView, dispatch]);
-
-  
   //  ================
   const location = useLocation();
 
@@ -69,7 +57,7 @@ function MyContribution({ styles }) {
   return (
     <>
       <section>
-        <div className={styles.myContributionSection} ref={ref}>
+        <div className={styles.myContributionSection}>
           <div className={styles.myContributionInner}>
             <h1>My Contributions</h1>
             {/* 하단 wrapper */}
@@ -81,7 +69,7 @@ function MyContribution({ styles }) {
                     return url.url.map((urlDetail, i) => {
                       return (
                         <a href={urlDetail}>
-                          <div key={i} className={styles.url}>
+                          <div key={uuidV4()} className={styles.url}>
                             {urlName(urlDetail)}
                           </div>
                         </a>

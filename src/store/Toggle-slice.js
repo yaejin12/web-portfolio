@@ -16,7 +16,7 @@ const BlackRefSlice = createSlice({
 });
 
 export const { toggleBlackRef } = BlackRefSlice.actions;
-export default BlackRefSlice.reducer;
+export const BlackRefReducer = BlackRefSlice.reducer;
 
 // 메뉴 닫힘 상태에 대한 초기 상태 설정
 const isCloseInitialState = {

@@ -7,6 +7,7 @@ function MenuNav({ styles }) {
   // 메뉴의 열림/닫힘 상태를 관리하는 로컬 상태 (초기값 false)
   const isClose = useSelector((state) => state.isCloseMenu.isCloseMenu);
   const dispatch = useDispatch();
+  const location = useLocation();
 
   // 메뉴 버튼 클릭 시 상태를 변경하고, Redux 액션을 디스패치하는 함수
   const closeClickHandler = () => {
