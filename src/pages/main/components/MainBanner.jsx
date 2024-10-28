@@ -43,6 +43,7 @@ function MainBanner({ styles }) {
       }
     );
   });
+
   useGSAP(() => {
     gsap.fromTo(
       titleRef.current[1],
@@ -61,6 +62,7 @@ function MainBanner({ styles }) {
       }
     );
   });
+  
   useGSAP(() => {
     gsap.fromTo(
       titleRef.current[2],

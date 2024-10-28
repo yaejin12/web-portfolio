@@ -28,8 +28,10 @@ body {
 :root {
   --color-bk: #171717;
   --color-gr: #7a7a7a;
-  --color-point: #f56e50;
-  --color-wh: #f4f0ec;
+  --color-point: #ff6714;
+  /* --color-point: #f56e50; */
+  /* --color-wh: #f4f0ec; */
+  --color-wh: #f4f1ed;
   --color-error: #ff0000;
 }
 

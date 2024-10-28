@@ -8,11 +8,10 @@ import { useInView } from "react-intersection-observer";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleBlackRef } from "../../store/Toggle-slice";
 import { useLocation } from "react-router-dom";
-
 function DetailProject() {
   const isRef = useSelector((state) => state.isBlackRef.isBlackRef);
   const [isViewRef, inView] = useInView({
-    threshold: 0.01,
+    threshold: 0.6,
   });
 
   const dispatch = useDispatch();

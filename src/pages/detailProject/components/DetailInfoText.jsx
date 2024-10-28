@@ -52,8 +52,11 @@ export const pageCircleText = [
     id: 2,
     text: (
       <>
-        테라피 용품 소개 및 <br />
-        판매를 통해 <span>수익을 창출</span> <br />
+        사용자들의 심적 안정을 높이기 <br /> 위해 향초와 인센스 스틱 같은
+        <br />
+        <span>
+          테라피 용품을 판매하여 수익을 <br /> 창출
+        </span>
         하였습니다.
       </>
     ),
@@ -62,8 +65,8 @@ export const pageCircleText = [
     id: 3,
     text: (
       <>
-        날씨 API를 활용해 현재 날씨와 시간에 맞는
-        <span> 힐링 영상을 제공하여 심리적 안정을 </span>돕습니다.
+        <span> 날씨 API를 활용해</span> <br /> 현재 날씨와 시간에 맞는 <br />
+        <span>힐링 영상을 제공 </span>하여 심리적 <br /> 안정을 돕습니다.
       </>
     ),
   },

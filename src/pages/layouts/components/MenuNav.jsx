@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleBlackRef, toggleCloseMenu } from "../../../store/Toggle-slice";
 import { useLocation } from "react-router-dom";
 
-function MenuNav({ styles }) {
+function MenuNav({ styles, isRef }) {
   // 메뉴의 열림/닫힘 상태를 관리하는 로컬 상태 (초기값 false)
   const isClose = useSelector((state) => state.isCloseMenu.isCloseMenu);
   const dispatch = useDispatch();
@@ -25,9 +25,6 @@ function MenuNav({ styles }) {
       document.body.classList.remove("body-lock"); // 컴포넌트 언마운트 시 제거
     };
   }, [isClose]);
-
-  // Redux에서 isBlackRef 상태를 가져옴
-  const isRef = useSelector((state) => state.isBlackRef.isBlackRef);
 
   return (
     <>

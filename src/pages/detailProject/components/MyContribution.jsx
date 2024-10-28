@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { useSelector } from "react-redux";
 import MyContributionDetail from "./MyContributionDetail";
@@ -65,8 +65,8 @@ function MyContribution({ styles }) {
               {/* 링크 연결 */}
               <div className={styles.urlWrapper}>
                 {projectUrl &&
-                  projectUrl.map((url, index) => {
-                    return url.url.map((urlDetail, i) => {
+                  projectUrl.map((url) => {
+                    return url.url.map((urlDetail) => {
                       return (
                         <a href={urlDetail}>
                           <div key={uuidV4()} className={styles.url}>
