@@ -4,8 +4,6 @@ import { useLocation } from "react-router-dom";
 function DetailHeader({ styles }) {
   const location = useLocation();
 
-  console.log("location", location);
-
   const [content, setContent] = useState({});
 
   const locationPathname = () => {

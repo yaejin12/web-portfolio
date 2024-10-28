@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
 import SkillBox from "../../../components/common/skill/SkillBox";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { toggleBlackRef } from "../../../store/Toggle-slice";
 
 function DetailSkills({ styles }) {
   const location = useLocation();
@@ -13,8 +14,10 @@ function DetailSkills({ styles }) {
 
   const meetingSkills = useSelector((state) => {
     if (location.pathname === "/1") {
+
       return state.projectSkills.meetingSkills;
     } else if (location.pathname === "/2") {
+
       return state.projectSkills.healingPageSkills;
     } else {
       return null;
