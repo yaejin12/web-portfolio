@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import MyContributionDetail from "./MyContributionDetail";
 import { useLocation } from "react-router-dom";
+import { v4 as uuidV4 } from "uuid";
 
 function MyContribution({ styles }) {
   //  ================
@@ -68,7 +69,7 @@ function MyContribution({ styles }) {
                     return url.url.map((urlDetail, i) => {
                       return (
                         <a href={urlDetail}>
-                          <div key={i} className={styles.url}>
+                          <div key={uuidV4()} className={styles.url}>
                             {urlName(urlDetail)}
                           </div>
                         </a>

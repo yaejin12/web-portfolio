@@ -3,11 +3,13 @@ import React, { useEffect, useRef } from "react";
 import { aboutMeText } from "./AboutMetText";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { v4 as uuidV4 } from "uuid";
 
 function AboutMe({ styles }) {
   const refs = useRef([]);
 
   gsap.registerPlugin(ScrollTrigger);
+
   useGSAP(() => {
     refs.current.map((ref) => {
       gsap.fromTo(
@@ -15,6 +17,7 @@ function AboutMe({ styles }) {
         { opacity: 0.1 },
         {
           opacity: 1,
+
           scrollTrigger: {
             trigger: ref,
             start: "top 80%", // 요소가 화면의 80% 위치에 도달할 때 시작
@@ -32,11 +35,9 @@ function AboutMe({ styles }) {
       {/* About Me */}
       {aboutMeText.map((text, i) => {
         return (
-          <div className={styles.aboutMeWrapper}>
+          <div className={styles.aboutMeWrapper} key={i}>
             <div className={styles.h1Title}>
-              <p key={i} ref={(el) => (refs.current[i] = el)}>
-                {text}
-              </p>
+              <p ref={(el) => (refs.current[i] = el)}>{text}</p>
             </div>
           </div>
         );

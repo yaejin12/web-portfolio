@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import styles from "./SkillBox.module.scss";
-
+import { v4 as uuidV4 } from "uuid";
 // skills 더미 넘기기
 const SkillBox = forwardRef(({ skills, title }, ref) => {
   return (
@@ -10,7 +10,7 @@ const SkillBox = forwardRef(({ skills, title }, ref) => {
       <ul className={styles.skill} ref={ref}>
         {skills?.map((skillText, i) => {
           return (
-            <li key={i} className={styles.skillBox}>
+            <li key={uuidV4()} className={styles.skillBox}>
               {skillText}
             </li>
           );

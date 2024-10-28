@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import iconOpen from "../../../assets/images/icons/arrow_url.svg";
+import { v4 as uuidV4 } from "uuid";
 
 function MyContributionDetail({ styles, project }) {
   // 박스 클릭했는지 상태관리
@@ -21,7 +22,7 @@ function MyContributionDetail({ styles, project }) {
         project.map((text) => {
           return (
             <div
-              key={text.id}
+              key={uuidV4()}
               className={`${styles.Box} ${
                 isBoxClick[text.id] ? styles.open : ""
               }`}

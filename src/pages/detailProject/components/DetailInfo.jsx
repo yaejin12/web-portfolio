@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { meetingCircleText, pageCircleText } from "./DetailInfoText";
+import { v4 as uuidV4 } from "uuid";
 
 function DetailInfo({ styles }) {
   // 프로젝트 더미 데이터
@@ -23,7 +24,7 @@ function DetailInfo({ styles }) {
     <div className={styles.detailInfoWrapper}>
       {projectInfo.map((text) => {
         return (
-          <div key={text.id} className={styles.circle}>
+          <div key={uuidV4()} className={styles.circle}>
             <p>{text.text}</p>
           </div>
         );
