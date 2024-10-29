@@ -7,7 +7,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
-
 function DetailTop({ styles }) {
   return (
     <section>
@@ -15,11 +14,6 @@ function DetailTop({ styles }) {
         {/* sticky 부모 */}
         <div className={styles.projectWrapper}>
           <DetailHeader styles={styles} />
-          {/*  */}
-          {/* 영상 */}
-
-          {/*  */}
-          {/* 설명 */}
           <div className={styles.videoWrapper}>
             <div className={styles.video}>
               <Video url={"https://youtu.be/qVWxRTHgnik"} />

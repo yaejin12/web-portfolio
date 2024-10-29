@@ -27,11 +27,14 @@ body {
 /* 루트 */
 :root {
   --color-bk: #171717;
+  --color-bk-text: #041e49;
   --color-gr: #7a7a7a;
-  --color-point: #ff6714;
+  --color-point: #3476f5;
+  /* --color-point: #ff6714; */
   /* --color-point: #f56e50; */
   /* --color-wh: #f4f0ec; */
-  --color-wh: #f4f1ed;
+  --color-wh-sub: #e1f2fc;
+  --color-wh: #ffffff;
   --color-error: #ff0000;
 }
 
