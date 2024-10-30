@@ -1,16 +1,19 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SkillBox from "../../../components/common/skill/SkillBox";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-import { toggleBlackRef } from "../../../store/Toggle-slice";
+import useWindowWidth from "../../../assets/hooks/useWindowWidth";
 
 function DetailSkills({ styles }) {
   const location = useLocation();
   const skillSectionRef = useRef();
   const skillUlRef = useRef();
+
+  // 반응형 상태관리
+  const [xPercentValue, setXPercentValue] = useState(-180);
+  const width = useWindowWidth();
 
   const meetingSkills = useSelector((state) => {
     if (location.pathname === "/1") {
@@ -22,12 +25,19 @@ function DetailSkills({ styles }) {
     }
   });
 
-  //  // kill 애니메이션
+  useEffect(() => {
+    if (width < 800) {
+      setXPercentValue(-500);
+    } else {
+      setXPercentValue(-180);
+    }
+  }, [width, xPercentValue]);
 
-  gsap.registerPlugin(ScrollTrigger);
-  useGSAP(() => {
+  //  // kill 애니메이션
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.to(skillUlRef.current, {
-      xPercent: -170,
+      xPercent: xPercentValue,
       ease: "none",
       scrollTrigger: {
         trigger: skillSectionRef.current,
@@ -37,7 +47,7 @@ function DetailSkills({ styles }) {
         end: "10%",
       },
     });
-  });
+  }, [width]);
 
   return (
     <section className={styles.mySkillSection} ref={skillSectionRef}>
