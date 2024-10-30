@@ -14,10 +14,8 @@ function DetailSkills({ styles }) {
 
   const meetingSkills = useSelector((state) => {
     if (location.pathname === "/1") {
-
       return state.projectSkills.meetingSkills;
     } else if (location.pathname === "/2") {
-
       return state.projectSkills.healingPageSkills;
     } else {
       return null;
@@ -27,7 +25,6 @@ function DetailSkills({ styles }) {
   //  // kill 애니메이션
 
   gsap.registerPlugin(ScrollTrigger);
-
   useGSAP(() => {
     gsap.to(skillUlRef.current, {
       xPercent: -170,
@@ -44,7 +41,7 @@ function DetailSkills({ styles }) {
 
   return (
     <section className={styles.mySkillSection} ref={skillSectionRef}>
-      <SkillBox skills={meetingSkills} ref={skillUlRef} />
+      <SkillBox skills={meetingSkills} ref={skillUlRef} size={"small"} />
     </section>
   );
 }

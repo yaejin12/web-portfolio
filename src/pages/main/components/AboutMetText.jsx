@@ -19,6 +19,6 @@ export const aboutMeText = [
     의미 있는 성과를 만들어 나가고 싶습니다.
   </>,
   <>
-    <span>믿고 뽑아주세요</span>
+    <span>감사합니다</span>
   </>,
 ];

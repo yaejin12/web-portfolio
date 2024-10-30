@@ -14,9 +14,10 @@
   // Skill title
 
   .title {
-    font-size: 65px;
+    font-size: var(--font-size-main-base);
     margin-bottom: 30px;
     font-style: italic;
+    color: var(--color-point);
   }
 
   // ===================
@@ -27,25 +28,25 @@
     display: flex;
     align-items: center;
     white-space: nowrap;
-    // // 첫번째 요소 마진 삭제
-    // &:nth-child(1) {
-    //   margin-right: 0;
-    // }
 
     // ===================
     // 스킬 각각 글자
 
     .skillBox {
-      font-size: 35px;
-      margin: 40px;
-      font-weight: 700;
+      font-size: var(--font-size-main-skill);
+      color: var(--color-wh);
+      margin: 0 40px;
+      font-weight: 500;
       white-space: nowrap;
-      color: rgba(rgb(244, 240, 237), 0.8);
-      will-change: transform;
 
-      // &:nth-child(1) {
-      //   margin-left: 20px;
-      // }
+      will-change: transform;
+    }
+
+    &.smallFontSize {
+      .skillBox {
+        font-size: var(--font-size-project-base);
+        margin: 0 30px;
+      }
     }
   }
 }
@@ -58,7 +59,6 @@
     // ===================
     // Skill title
     .title {
-      font-size: 50px;
       margin-bottom: 24px;
     }
 
@@ -66,11 +66,12 @@
     // 스킬 각각 글자
     .skill {
       .skillBox {
-        margin: 25px;
-        font-size: 25px;
-        // &:nth-child(1) {
-        //   margin-left: 280px;
-        // }
+        margin: 0 25px;
+      }
+      &.smallFontSize {
+        .skillBox {
+          // font-size: 18px;
+        }
       }
     }
   }
@@ -83,7 +84,6 @@
     // ===================
     // Skill title
     .title {
-      font-size: 40px;
       margin-bottom: 15px;
     }
 
@@ -91,11 +91,12 @@
       // ===================
       // 스킬 각각 글자
       .skillBox {
-        font-size: 20px;
-        margin: 20px;
-        // &:nth-child(1) {
-        //   margin-left: 200px;
-        // }
+        margin: 0 20px;
+      }
+      &.smallFontSize {
+        .skillBox {
+          margin: 0 20px;
+        }
       }
     }
   }
@@ -108,7 +109,6 @@
     // ===================
     // Skill title
     .title {
-      font-size: 27px;
       margin-bottom: 10px;
     }
 
@@ -120,11 +120,12 @@
       // 스킬 각각 글자
 
       .skillBox {
-        font-size: 15px;
-        margin: 15px;
-        // &:nth-child(1) {
-        //   margin-left: 200px;
-        // }
+        margin: 0 10px;
+      }
+      &.smallFontSize {
+        .skillBox {
+          margin: 0 15px;
+        }
       }
     }
   }
@@ -137,7 +138,6 @@
     // ===================
     // Skill title
     .title {
-      font-size: 23px;
       margin-bottom: 10px;
     }
 
@@ -149,11 +149,12 @@
       // 스킬 각각 글자
 
       .skillBox {
-        font-size: 16px;
-        margin: 14px;
-        // &:nth-child(1) {
-        //   margin-left: 150px;
-        // }
+        margin: 0 7px;
+      }
+      &.smallFontSize {
+        .skillBox {
+          margin: 0 10px;
+        }
       }
     }
   }
@@ -166,7 +167,6 @@
     // ===================
     // Skill title
     .title {
-      font-size: 18px;
       margin-bottom: 10px;
     }
 
@@ -176,11 +176,6 @@
     .skill {
       // ===================
       // 스킬 각각 글자
-
-      .skillBox {
-        font-size: 12px;
-        margin: 15px;
-      }
     }
   }
 }
