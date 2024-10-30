@@ -18,9 +18,9 @@
   letter-spacing: -4px;
 
   .text {
-    font-size: clamp(57px, 10.9vw, 220px);
+    font-size: clamp(50px, 10.9vw, 220px);
     line-height: 110%;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--color-bk);
 
     &:nth-child(1) {
@@ -33,7 +33,7 @@
       // yae
       p:nth-child(2) {
         font-style: italic;
-        font-weight: 400;
+        // font-weight: 400;
         margin-right: clamp(16px, 3.125vw, 60px); /* 60px 목표 */
       }
     }
@@ -41,30 +41,49 @@
     // Frontend
     &:nth-child(2) {
       margin-left: clamp(16px, 11.98vw, 230px);
+      color: var(--color-point);
+      font-weight: 800;
+      letter-spacing: -1px;
     }
 
     // Portfolio
     &:nth-child(3) {
       font-style: italic;
+      font-weight: 800;
     }
   }
   // ==========
   // git
   // ==========
   .git {
-    display: flex;
-    // height: 100%;
-    align-items: end;
-    font-size: 27px;
+    height: 100%;
     margin: 100px 0 0 0;
-    font-weight: 800;
+    font-weight: 900;
 
-    // 아이콘 화살표 이미지
-    img {
-      margin-left: 20px;
-      width: 30px;
-      object-fit: contain;
-      background-repeat: no-repeat;
+    a {
+      display: flex;
+      line-height: 100%;
+
+      &:hover {
+        img {
+          animation: gitAni 1s ease-in-out infinite;
+        }
+      }
+
+      p {
+        display: flex;
+        font-size: 26px;
+        align-items: end;
+        color: var(--color-bk);
+      }
+
+      // 아이콘 화살표 이미지
+      img {
+        margin-left: 20px;
+        width: 30px;
+        object-fit: contain;
+        background-repeat: no-repeat;
+      }
     }
   }
 }
@@ -112,6 +131,17 @@
     transform: 0;
   }
 }
+@keyframes gitAni {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(8px, -8px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 
 //==============================
 // 반응형
@@ -127,13 +157,16 @@
 
     // git
     .git {
-      font-size: 20px;
-      margin: 50px 0 0 0;
+      a {
+        p {
+          font-size: 20px;
+        }
 
-      // 아이콘 화살표 이미지
-      img {
-        width: 28px;
-        margin-left: 20px;
+        // 아이콘 화살표 이미지
+        img {
+          width: 28px;
+          margin-left: 20px;
+        }
       }
     }
   }
@@ -148,13 +181,16 @@
   .mainBannerWrapper {
     // git
     .git {
-      font-size: 18px;
-      margin: 70px 0 0 0;
+      a {
+        p {
+          font-size: 18px;
+        }
 
-      // 아이콘 화살표 이미지
-      img {
-        width: 25px;
-        margin-left: 18px;
+        // 아이콘 화살표 이미지
+        img {
+          width: 22px;
+          margin-left: 18px;
+        }
       }
     }
   }
@@ -167,22 +203,96 @@
 
   // Main title 부분
   .mainBannerWrapper {
+    .text {
+      letter-spacing: -2px;
+
+      // Frontend
+      &:nth-child(2) {
+        margin-left: clamp(16px, 11.98vw, 230px);
+      }
+
+      // Portfolio
+      &:nth-child(3) {
+      }
+    }
+
     // git
     .git {
-      font-size: 18px;
-      margin: 70px 0 0 0;
+      a {
+        p {
+          font-size: 15px;
+        }
 
-      // 아이콘 화살표 이미지
-      img {
-        width: 25px;
-        margin-left: 18px;
+        // 아이콘 화살표 이미지
+        img {
+          width: 18px;
+          margin-left: 15px;
+        }
       }
     }
   }
 }
 
 @media screen and (max-width: 500px) {
+  .mainBannerInner {
+    padding: 15px 0 15px 15px;
+  }
+
+  // Main title 부분
+  .mainBannerWrapper {
+    .text {
+      line-height: 120%;
+
+      // Frontend
+      &:nth-child(2) {
+        margin-left: 50px;
+      }
+    }
+
+    // git
+    .git {
+      a {
+        p {
+          font-size: 14px;
+        }
+
+        // 아이콘 화살표 이미지
+        img {
+          width: 15px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 320px) {
+  .mainBannerInner {
+    padding: 8px 0 8px 8px;
+  }
+
+  // Main title 부분
+  .mainBannerWrapper {
+    .text {
+      // Frontend
+      &:nth-child(2) {
+        margin-left: 0px;
+      }
+    }
+
+    // git
+    .git {
+      a {
+        p {
+          font-size: 14px;
+        }
+
+        // 아이콘 화살표 이미지
+        img {
+          width: 15px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
 }

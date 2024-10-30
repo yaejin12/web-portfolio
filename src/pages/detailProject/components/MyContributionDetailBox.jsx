@@ -9,29 +9,27 @@ import { useLocation } from "react-router-dom";
 
 function MyContributionDetailBox({ styles }) {
   const location = useLocation();
+  // 프로젝트텍스트 내용
   const [projectText, setProjectText] = useState([]);
-  const [isMoreClick, setIsMoreClick] = useState(
-    new Array(projectText.length).fill(false)
-  );
+  // more 클릭 했는지
+  const [isMoreClick, setIsMoreClick] = useState([]);
+
+  // 프로젝트 내용 불러오기
   useEffect(() => {
     if (location.pathname === "/1") {
       setProjectText(meetingMyContributionText);
+      setIsMoreClick(meetingMyContributionText.map((text) => false));
     } else if (location.pathname === "/2") {
       setProjectText(pageMyContributionText);
+      setIsMoreClick(pageMyContributionText.map((text) => false));
     }
-  }, []);
+  }, [location]);
 
+  // Box클릭 이벤트
   const moreClickHandler = (index) => {
-    console.log(isMoreClick[index]);
-    setIsMoreClick((prev) => {
-      if (prev[index]) {
-        return !prev[index];
-      } else {
-        const newState = new Array(prev.length).fill(false);
-        newState[index] = true;
-        return newState;
-      }
-    });
+    setIsMoreClick((prev) =>
+      prev.map((_, i) => (i === index ? !prev[index] : false))
+    );
   };
 
   return (
@@ -45,8 +43,10 @@ function MyContributionDetailBox({ styles }) {
           >
             {/* 제목 wrapper */}
             <div className={styles.myContributionDetailTitleWrapper}>
-              <p>{text.skill}</p>
-              <p>{text.pageTitle}</p>
+              <div className={styles.title}>
+                <p>{text.skill}</p>
+                <p>{text.pageTitle}</p>
+              </div>
               {/* 더보기 wrapper */}
               <div className={styles.detailMore}>
                 <div className={styles.detailMoreLine}></div>
@@ -55,14 +55,11 @@ function MyContributionDetailBox({ styles }) {
             </div>
             {/* 상세 내용 */}
             <ul className={styles.detailTextWrapper}>
-              {text.details.map((detailText) => {
+              {text.details.map((detailText, i) => {
                 return (
-                  <li>
+                  <li key={i}>
                     <p className={styles.detailTextTitle}>
-                      <FontAwesomeIcon
-                        icon={faStarOfLife}
-                        className={styles.icon}
-                      />
+                 
                       {detailText.title}
                     </p>
                     <p className={styles.detailText}>

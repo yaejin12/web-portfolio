@@ -27,15 +27,27 @@ body {
 /* 루트 */
 :root {
   --color-bk: #171717;
-  --color-bk-text: #041e49;
+  --color-bk-text: #182134;
   --color-gr: #7a7a7a;
+  --color-gr-l: #aeaeae;
   --color-point: #3476f5;
-  /* --color-point: #ff6714; */
-  /* --color-point: #f56e50; */
-  /* --color-wh: #f4f0ec; */
   --color-wh-sub: #e1f2fc;
   --color-wh: #ffffff;
   --color-error: #ff0000;
+}
+
+:root {
+  --font-size-icon: 15px;
+  --font-size-base: 16px;
+  /* 표 작은 */
+  --font-size-sm: 16px;
+  /*  */
+  --font-size-project-base: 25px;
+  --font-size-project-base-sub: 22px;
+  /*  */
+  --font-size-title: 65px;
+  --font-size-main-base: 45px;
+  --font-size-main-skill: 35px;
 }
 
 *::-webkit-scrollbar {
@@ -47,6 +59,33 @@ body {
   body {
     font-size: 15px;
   }
+  :root {
+    --font-size-footer: 14px;
+    --font-size-base: 13px;
+    /* 표 작은 */
+    --font-size-sm: 14px;
+    /*  */
+    --font-size-project-base: 20px;
+    --font-size-project-base-sub: 17px;
+    /*  */
+    --font-size-title: 55px;
+    --font-size-main-base: 35px;
+    --font-size-main-skill: 25px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  :root {
+    --font-size-sm: 12px;
+    --font-size-base: 13px;
+    --font-size-project-base: 15px;
+    --font-size-project-base-sub: 13px;
+    --font-size-footer: 10px;
+    /*  */
+    --font-size-title: 45px;
+    --font-size-main-base: 25px;
+    --font-size-main-skill: 15px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -54,11 +93,32 @@ body {
   body {
     font-size: 12px;
   }
+  :root {
+    --font-size-sm: 11px;
+    --font-size-title: 35px;
+    --font-size-main-base: 25px;
+  }
 }
 
 @media screen and (max-width: 500px) {
   html,
   body {
     font-size: 9px;
+  }
+  :root {
+    --font-size-title: 25px;
+    --font-size-main-base: 16px;
+    --font-size-main-skill: 14px;
+
+    /*  */
+    --font-size-project-base: 13px;
+    --font-size-project-base-sub: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  :root {
+    --font-size-title: 20px;
+    --font-size-main-base: 14px;
   }
 }

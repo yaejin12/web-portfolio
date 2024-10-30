@@ -12,8 +12,10 @@ function Footer() {
           <p>
             <span>Email.</span>pos03167@naver.com
           </p>
+          <p>
+            <span>Address.</span>서울시 마포구 공덕동
+          </p>
         </div>
-        <img src={logoGray} />
       </div>
     </footer>
   );

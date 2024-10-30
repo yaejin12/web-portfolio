@@ -62,7 +62,7 @@ function MainBanner({ styles }) {
       }
     );
   });
-  
+
   useGSAP(() => {
     gsap.fromTo(
       titleRef.current[2],
@@ -122,7 +122,7 @@ function MainBanner({ styles }) {
           {/* 깃 바로가기 */}
           <div className={styles.git} ref={(el) => (titleRef.current[3] = el)}>
             <a href="https://github.com/yaejin12">
-              MY GIT HUB
+              <p>MY GIT HUB</p>
               <img src={gitArrow} />
             </a>
           </div>
