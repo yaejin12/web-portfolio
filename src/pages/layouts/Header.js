@@ -8,9 +8,7 @@ function Header({ styles }) {
 
   return (
     <header>
-      {/* <div className={styles.headerWrapper}> */}
       <MenuNav styles={styles} isRef={isRef} />
-      {/* </div> */}
     </header>
   );
 }

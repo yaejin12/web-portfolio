@@ -1,30 +1,32 @@
 header {
   width: 100%;
   height: 80px;
+  position: fixed;
+  z-index: 99999;
 }
 
 // 메뉴
 .menuWrapper {
-  top: 15px;
+  top: 20px;
   right: 50px;
-  width: 70px;
-  height: 70px;
-  position: fixed;
+  width: 60px;
+  height: 60px;
+  position: absolute;
   cursor: pointer;
   z-index: 99999;
   border-radius: 50%;
-  background-color: var(--color-point);
+  background-color: var(--color-wh);
 
   //햄버거
   .menuLine {
     position: absolute;
-    width: 40px;
+    width: 30px;
     height: 2px;
 
     left: 50%;
     border-radius: 30px;
     transform: translate(-50%, -50%);
-    background-color: var(--color-wh);
+    background-color: var(--color-bk);
 
     transition: 0.3s;
     &:nth-child(1) {
@@ -58,7 +60,7 @@ header {
   &.open {
     transform: translateX(0);
   }
-  background-color: #333; /* 배경색 */
+  // background-color: #333; /* 배경색 */
   transform: translateY(-100%); /* 메뉴가 닫혔을 때는 화면 밖으로 */
   transition: transform 0.3s ease;
 
