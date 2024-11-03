@@ -14,16 +14,17 @@ function AboutMe({ styles }) {
     refs.current.map((ref) => {
       gsap.fromTo(
         ref,
-        { opacity: 0.01 },
+        { opacity: 0.0, yPercent: 200 },
         {
           opacity: 1,
+          yPercent: 0,
           scrollTrigger: {
             trigger: ref,
             start: "center center", // 요소가 화면의 80% 위치에 도달할 때 시작
-            end: "center top 30%", // 요소가 화면의 20% 위치에 도달할 때 종료
+            end: "center top 20%", // 요소가 화면의 20% 위치에 도달할 때 종료
             scrub: true,
             pin: true,
-            onLeave: () => gsap.to(ref, { opacity: 0.01 }), // 스크롤이 끝난 뒤 opacity를 0.1으로
+            onLeave: () => gsap.to(ref, { opacity: 0.0, yPercent: -200 }), // 스크롤이 끝난 뒤 opacity를 0.1으로
           },
         }
       );

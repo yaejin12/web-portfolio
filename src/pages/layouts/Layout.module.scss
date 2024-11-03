@@ -7,20 +7,21 @@ header {
 
 // 메뉴
 .menuWrapper {
+  width: 45px;
+  height: 45px;
   top: 20px;
   right: 50px;
-  width: 60px;
-  height: 60px;
   position: absolute;
   cursor: pointer;
   z-index: 99999;
   border-radius: 50%;
   background-color: var(--color-wh);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 
   //햄버거
   .menuLine {
     position: absolute;
-    width: 30px;
+    width: 25px;
     height: 2px;
 
     left: 50%;
@@ -103,11 +104,11 @@ header {
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
-          background-image: url(../../assets//images/icons/flower_icon.svg);
+          background-image: url(../../assets//images/img/path_B.png);
           top: 50%;
           transform: translateY(-50%);
           z-index: 9999;
-          animation: rotate 8s linear infinite;
+          animation: menuHoverAni 1.5s linear infinite;
         }
         &::before {
           content: "";
@@ -118,12 +119,12 @@ header {
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
-          background-image: url(../../assets//images/icons/flower_icon.svg);
+          background-image: url(../../assets//images/img/path_B.png);
           top: 50%;
-          // transform: translateY(50%);
+          transform: translateY(50%);
           left: -65px;
           z-index: 9999;
-          animation: rotate 8s linear infinite;
+          animation: menuHoverAni 1.5s linear infinite;
         }
       }
     }
@@ -169,12 +170,15 @@ footer {
 }
 
 /* @keyframes 애니메이션 정의 */
-@keyframes rotate {
-  from {
-    transform: translateY(-50%) rotate(0deg); /* 시작 시 0도 */
+@keyframes menuHoverAni {
+  0% {
+    transform: translateY(-20%); /* 시작 시 0도 */
   }
-  to {
-    transform: translateY(-50%) rotate(360deg); /* 끝날 때 360도 회전 */
+  50% {
+    transform: translateY(-50%); /* 끝날 때 360도 회전 */
+  }
+  100% {
+    transform: translateY(-20%);
   }
 }
 
@@ -229,12 +233,12 @@ footer {
   // 메뉴
   .menuWrapper {
     right: 50px;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
 
     //햄버거
     .menuLine {
-      width: 30px;
+      width: 20px;
       height: 2px;
     }
   }
@@ -341,15 +345,17 @@ footer {
   // =========================
   // 반응형 500px header
   // =========================
+
   // 메뉴
   .menuWrapper {
     right: 15px;
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
+    top: 15px;
 
     //햄버거
     .menuLine {
-      width: 20px;
+      width: 15px;
       height: 1.5px;
     }
   }
@@ -397,6 +403,7 @@ footer {
   // =========================
   .menuWrapper {
     right: 8px;
+    top: 8px;
   }
   .headerWrapper {
     // inner

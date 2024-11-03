@@ -44,8 +44,10 @@
 
     &.smallFontSize {
       .skillBox {
-        font-size: var(--font-size-project-base);
         margin: 0 30px;
+        p {
+          font-size: var(--font-size-project-base);
+        }
       }
     }
   }

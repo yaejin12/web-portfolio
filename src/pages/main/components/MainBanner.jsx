@@ -14,9 +14,7 @@ function MainBanner({ styles, isLoading }) {
   const ref = useRef([{ dateRef: null, textBottomRef: null, imgRef: null }]);
 
   useEffect(() => {
-    console.log(isLoading);
-
-    if (!isLoading) {
+    if (isLoading) {
       const tl = gsap.timeline({
         defaults: { duration: 1, ease: "sine.inOut" },
       });
@@ -72,9 +70,9 @@ function MainBanner({ styles, isLoading }) {
               <br />
               eyj5202@naver.com
             </p>
-            <p>
-              Lee yae jin <br /> frontend developer
-            </p>
+            <div className={styles.scroll}>
+            <span></span>
+            </div>
             <a href="https://github.com/yaejin12" alt="yaejin Git Hub">
               <p>
                 My Git Hub <img src={gitImg} alt="arrow" />

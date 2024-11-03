@@ -9,7 +9,7 @@
   align-items: center;
   background-color: var(--color-bk);
   z-index: 9999999;
-  transition: top 0.5s ease; // 위치 변경 애니메이션 추가
+  transition: top 0.5s ease;
 
   .loadingImgWrapper {
     display: flex;
@@ -41,5 +41,70 @@
 
   &.closeLoading {
     top: -100%;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .loadingPageSection {
+    .loadingImgWrapper {
+      // 예진
+      .nameImgWrapper {
+        .yae {
+          width: 90px;
+        }
+
+        .jin {
+          width: 60px;
+        }
+      }
+
+      .portfolio {
+        width: 240px;
+        transform: translateY(-10px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .loadingPageSection {
+    .loadingImgWrapper {
+      // 예진
+      .nameImgWrapper {
+        .yae {
+          width: 55px;
+        }
+
+        .jin {
+          width: 40px;
+        }
+      }
+
+      .portfolio {
+        width: 140px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .loadingPageSection {
+    .loadingImgWrapper {
+      // 예진
+      .nameImgWrapper {
+        .yae {
+          width: 40px;
+        }
+
+        .jin {
+          width: 30px;
+        }
+      }
+
+      .portfolio {
+        width: 100px;
+        transform: translateY(-10px);
+      }
+    }
   }
 }

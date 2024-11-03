@@ -17,7 +17,7 @@ const SkillBox = forwardRef(({ skills, title, size }, ref) => {
         {skills?.map((skillText, i) => {
           return (
             <li key={uuidV4()} className={styles.skillBox}>
-              {skillText}
+              <p>{skillText}</p>
             </li>
           );
         })}

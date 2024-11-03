@@ -13,7 +13,7 @@ import LoadingPage from "./components/LoadingPage";
 
 function Main() {
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState({ loading: true, mainAni: false });
   const isRootPath = location.pathname === "/";
 
   const [ref, inView] = useInView({
@@ -28,10 +28,10 @@ function Main() {
 
   return (
     <>
-      {isLoading ? <LoadingPage setIsLoading={setIsLoading} /> : ""}
+      {isLoading.loading ? <LoadingPage setIsLoading={setIsLoading} /> : ""}
       {isRootPath && (
         <>
-          <MainBanner styles={mainStyles} isLoading={isLoading} />
+          <MainBanner styles={mainStyles} isLoading={isLoading.mainAni} />
           <div style={{ height: "100%" }} ref={ref}>
             <AboutMe styles={aboutMeStyles} />
             <MySkill styles={aboutMeStyles} />

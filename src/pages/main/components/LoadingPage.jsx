@@ -41,10 +41,11 @@ function LoadingPage({ setIsLoading }) {
         ease: "sine.inOut", // 자연스러운 움직임을 위한 이징
         duration: 0.8, // 둥둥 효과의 지속 시간
         delay: 0.1, // 떠다니기 시작 전에 0.5초 딜레이
-        onComplete: () => setIsLoading(false),
+        onComplete: () => setIsLoading((prev) => ({ ...prev, mainAni: true })),
       })
       .to(Ref.current.loadingRef, {
         yPercent: -100,
+        onComplete: () => setIsLoading((prev) => ({ ...prev, loading: false })),
       });
   }, []);
 
