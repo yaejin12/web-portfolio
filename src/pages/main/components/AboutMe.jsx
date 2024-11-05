@@ -21,20 +21,17 @@ function AboutMe({ styles }) {
         ref,
         {
           opacity: 0.0,
-          yPercent: 20, // 아래에서 시작
         },
         {
           opacity: 1,
-          yPercent: 0,
           scrollTrigger: {
             trigger: ref,
-            start: "center 70%",
+            start: "center 80%",
             end: "center 30%", // 요소가 화면의 20% 위치에 도달할 때 종료
             toggleActions: "play none reverse reverse",
             onLeave: () =>
               gsap.to(ref, {
                 opacity: 0,
-                // yPercent: -50,
               }), // 스크롤이 끝난 뒤 opacity를 0.1으로
           },
         }

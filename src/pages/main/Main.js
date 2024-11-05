@@ -28,7 +28,7 @@ function Main() {
 
   return (
     <>
-      {isLoading.loading ? <LoadingPage setIsLoading={setIsLoading} /> : ""}
+      {/* {isLoading.loading ? <LoadingPage setIsLoading={setIsLoading} /> : ""} */}
       {isRootPath && (
         <>
           <MainBanner styles={mainStyles} isLoading={isLoading.mainAni} />
