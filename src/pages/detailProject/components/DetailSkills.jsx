@@ -13,7 +13,7 @@ function DetailSkills({ styles }) {
 
   // 반응형 상태관리
 
-  const width = useWindowWidth();
+  const { width } = useWindowWidth();
 
   const meetingSkills = useSelector((state) => {
     if (location.pathname === "/1") {
